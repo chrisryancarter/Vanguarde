@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  featured_image: MyString
+  title: MyString
+  subtext: MyText
+  fulltext: MyText
+  project_scope: MyText
+  credits: MyText
+  season: MyText
+  selected: false
+  logo: MyString
+
+two:
+  featured_image: MyString
+  title: MyString
+  subtext: MyText
+  fulltext: MyText
+  project_scope: MyText
+  credits: MyText
+  season: MyText
+  selected: false
+  logo: MyString
