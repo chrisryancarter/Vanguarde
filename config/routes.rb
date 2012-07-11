@@ -1,7 +1,12 @@
 Vangaurde::Application.routes.draw do
 
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  root :to => "pages#home"
+
   # (Mostly) Static Pages
-  get "home" =>  'pages#home'
   get "about" => 'pages#about'
   get "contact" => 'pages#about'
 
