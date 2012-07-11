@@ -1,10 +1,9 @@
 Vangaurde::Application.routes.draw do
-  
-  get "pages/home"
 
-  get "pages/about"
-
-  get "pages/contact"
+  # (Mostly) Static Pages
+  get "home" =>  'pages#home'
+  get "about" => 'pages#about'
+  get "contact" => 'pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
