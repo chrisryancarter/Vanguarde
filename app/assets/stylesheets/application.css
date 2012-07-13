@@ -8,29 +8,6 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap
- *= require bootstrap-wysihtml5
- *= require pages
  *= require_self
+ *= require pages
 */
-a.btn, a:link.btn, a:visited.btn {
-	color: #333;
-  text-decoration: none;
-}
-.label {
-  font-size: 12px;
-  font-weight: normal;
-  color: #333;
-  text-shadow: none;
-  background: none;
-  float: none;
-}
-.breadcrumb {
-  padding: 0;
-  margin: 0;
-  background: none;
-  border: none;
-  filter: none;
-  border-radius: none;
-  box-shadow: none;
-}
