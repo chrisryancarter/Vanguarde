@@ -10,7 +10,7 @@
  *
  *= require bootstrap
  *= require bootstrap-wysihtml5
- *= require_tree .
+ *= require pages
  *= require_self
 */
 a.btn, a:link.btn, a:visited.btn {
