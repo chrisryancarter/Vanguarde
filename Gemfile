@@ -7,8 +7,12 @@ gem 'rails', '3.2.3'
 
 gem 'pg'
 gem 'thin'
-gem 'rspec-rails'
+gem 'rspec-rails', :group => [:test, :development]
 gem 'activeadmin'
+gem 'carrierwave'
+gem 'bootstrap-wysihtml5-rails'
+gem 'jquery-rails'
+gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,10 +26,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 
 group :test do
+  gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'guard-rspec'
 end
 
 
