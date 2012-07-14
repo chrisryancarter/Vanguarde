@@ -51,25 +51,235 @@ body{
 	background: #000;
 }
 
-#mainContainer{
-	width:1200px;
-	margin-top: 30px;
-	margin-left:auto;
-	margin-right: auto;
-	min-height:1000px; /* TODO - Remove */
-	background-image: url('background.jpg');
-	background-repeat:repeat-y;
-}
+.spacer{clear: both;}
+ /*Fonts */
+
+ @font-face {
+ 	font-family: 'Mussica';
+  	src: url('fonts/Mussica.ttf');
+ 	src: url('fonts/233AA9_0_0.eot');
+ 	src: url('fonts/233AA9_0_0.eot?#iefix') 
+ 	format('embedded-opentype'),
+ 	url('fonts/233AA9_0_0.woff') format('woff'),
+ 	url('fonts/233AA9_0_0.ttf') format('truetype');
+ }
+ 
+  
+ @font-face {
+ 	font-family: 'Snob';
+ 	src: url('fonts/233AA9_1_0.eot');
+ 	src: url('fonts/233AA9_1_0.eot?#iefix') 
+ 	format('embedded-opentype'),
+ 	url('fonts/233AA9_1_0.woff') 
+ 	format('woff'),url('fonts/233AA9_1_0.ttf') 
+ 	format('truetype');
+ }
+ 
+  @font-face {
+  	font-family: 'Futura';
+ 	src: url('fonts/Futura.otf');
+ }
+
+
+/* Header */
+
 
 #header{
 	width: 1100px;
 	height: 461px;
 	margin-top: 20px;
+	margin-left:auto;
+	margin-right: auto;	
 	background-image: url('headerBack.png');
 	background-repeat:no-repeat;	
 }
 
+/* Naviagation */
+
+#navContainer{
+	width:1200px;
+	height: 70px;
+}
+
+#anvm{
+	width: 314px;
+	height: 60px;
+	float:left;
+	background-image: url('home/anvm.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	padding-top: 40px;
+	margin-left: 68px;
+	margin-top: 15px;
+}
+
+#craft{
+	width: 369px;
+	height: 60px;
+	float:left;
+	background-image: url('home/craft.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	padding-top: 40px;
+	margin-left: 22px;
+	margin-top: 15px;
+
+}
+
+#conversation{
+	width: 342px;
+	height: 60px;
+	float:left;
+	background-image: url('home/conversation.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	padding-top: 40px;
+	margin-left: 22px;
+	margin-top: 15px;
+
+}
+
+#mainContainer{
+	width:1200px;
+	margin-top: 30px;
+	margin-left:auto;
+	margin-right: auto;
+	height: auto;
+	background-image: url('background.jpg');
+	background-repeat:repeat-y;
+	padding-top: 5px;
+	padding-bottom: 300px;
+}
+
+#nav li{
+	list-style-type: none;
+	float:left;
+	color:#000;
+	text-transform: uppercase;
+	margin-right: 44px;
+	font-size: 14px;
+	font-family: 'Futura', Helvetica;
+	font-weight: 100;
+}
+
+#nav li:last-child{
+	margin-right: 0px;
+}
+
+/* Main Slider */
+	
+#mainSliderContainer{
+	width:1098px;
+	height: 305px;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 38px;
+	border-top: solid 5px #000; 
+	border-left: solid 1px #000; 
+	border-right: solid 1px #000; 
+	border-bottom: solid 1px #000; 
+	background: #fff;
+}
+
+#mainSliderInnerContainer{
+	width:1070px;
+	height: 255px;
+	margin:auto;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+#mainSliderInnerContainer img{
+	margin-left:2px;
+	margin-right:2px;
+}
+
+#mainSliderContainer .link{
+	width:1060px;
+	height:10px;
+	border-top: solid 1px #000; 
+	padding-left: 10px;
+	margin-top:16px;
+
+}
+
+#mainSliderContainer .link a{
+	color:#000;
+	text-transform: uppercase;
+	font-size: 9px;
+	font-family: 'Futura', Helvetica;
+	font-weight: 100;
+	text-decoration: none;
+}
 
 
+/* Tumblr Object */
 
+#tumblr{
+	margin-left:50px;
+  	margin-top:30px;
+}
+
+
+/* Titles */
+
+#titleNews{
+	width:1075px;
+	height:43px;
+	border-bottom: solid 1px #000; 
+	border-top: solid 1px #000; 
+	color: #000;
+	text-transform: uppercase;
+	font-size: 31px;
+	font-family: 'Futura', Helvetica;
+	background-image: url('icons/news.png');
+	background-repeat:no-repeat;
+	padding-left: 45px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 50px;
+	padding-top: 7px;
+	background-position: 1px 3px;
+
+}
+
+#titleWork{
+	width:1075px;
+	height:43px;
+	border-bottom: solid 1px #000; 
+	border-top: solid 1px #000; 
+	color: #000;
+	text-transform: uppercase;
+	font-size: 34px;
+	font-family: 'Mussica';
+	background-image: url('icons/work.png');
+	background-repeat:no-repeat;
+	padding-left: 45px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 50px;
+	padding-top: 7px;
+	background-position: 1px 3px;
+}
+
+/* Sub Titles */
+	#subTitle{
+		width: 350px;
+		height:22px;
+		background: #000;
+		font-family: 'Georgia', Serif;
+		color: #fff;
+		font-style: italic;
+		font-weight: thin;
+		padding:3px;
+		float:left;
+		margin-left: 40px;	
+
+	}
+
+
+	#subTitle .right{
+		float:right;
+		margin-right: 40px;
+	}
 
