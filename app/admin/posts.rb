@@ -14,7 +14,9 @@ ActiveAdmin.register Post do
     # column "Featured Image" do |post|
     #   image_tag post.image
     # end
-    column :created_at
+    column :posted_at do |post|
+      post.created_at.getlocal.strftime("%b %e, %Y @ %l:%M%p")
+    end
     default_actions
   end
 
