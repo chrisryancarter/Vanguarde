@@ -143,7 +143,7 @@ body{
 	margin-top: 30px;
 	margin-left:auto;
 	margin-right: auto;
-	min-height:1000px; /* TODO - Remove */
+	height: auto;
 	background-image: url('background.jpg');
 	background-repeat:repeat-y;
 	padding-top: 5px;
@@ -211,4 +211,9 @@ body{
 }
 
 
+/* Tumblr Object */
 
+#tumblr{
+	margin-left:50px;
+  	margin-top:30px;
+}
