@@ -7,8 +7,9 @@ gem 'rails', '3.2.3'
 
 gem 'pg'
 gem 'thin'
+gem 'pry-rails', :group => :development
 gem 'rspec-rails', :group => [:test, :development]
-gem 'activeadmin'
+gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git'
 gem 'carrierwave'
 gem 'bootstrap-wysihtml5-rails'
 gem 'jquery-rails'

@@ -39,7 +39,7 @@ ActiveAdmin.register Post do
       f.input :snippet, :label => false, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" }
       f.input :published
     end
-    f.buttons
+    f.actions
   end
   
 end
