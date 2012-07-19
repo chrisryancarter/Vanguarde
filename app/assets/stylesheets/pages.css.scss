@@ -122,10 +122,15 @@ body{
 	background-image: url('home/conversation.jpg');
 	background-position: top;
 	background-repeat: no-repeat;
-	padding-top: 40px;
+	padding-top:26px;
 	margin-left: 22px;
 	margin-top: 15px;
 
+}
+
+#conversation img{
+	float:right;
+	margin-left:5px;
 }
 
 #mainContainer{
