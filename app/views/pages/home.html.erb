@@ -1,28 +1,6 @@
 <div id="mainContainer">
-	<div id="header">
 
-	</div>	
-
-	<div id="navContainer">
-		<div id="anvm">
-			<ul id="nav">
-				<li>Home</li>
-				<li>The VV &amp; C</li>
-				<li>Categories</li>
-			</ul>	
-
-		</div>	
-		<div id="craft">
-			<ul id="nav">
-				<li>VV &amp; C Works</li>
-				<li>ANVM Store</li>
-				<li>Contact</li>
-			</ul>	
-		</div>	
-		<div id="conversation">
-			asd
-		</div>	
-	</div>
+<%= render "shared/header" %>
 		
 	<span class="spacer"></span>
 
@@ -37,20 +15,166 @@
 		</div>	
 	</div>	
 	
-	<object width="1100" height="2480" id="tumblr" data="http://vangaurde.tumblr.com/" type="text/html">
+	<object width="1100" height="600" id="tumblr" data="http://vangaurde.tumblr.com/" type="text/html">
 		<p>This is the fallback code!</p>
 	</object>
 
 	<div id="titleWork">
 		VANGUARDE WORKS
 	</div>
-
 	<div id="subTitle">
 		Select Edits
+	</div>
+
+	<div id="worksContainer">
+		<div id="worksPhoto">
+			<%= image_tag "temp/work1.jpg" %>
+			<div id="worksPhototitle">
+				COURVOISIER
+			</div>
+			<div id="worksPhotoSubtitle">
+				Redefining an Iconic Cognac
+			</div>
+			<div id="worksSeason">
+				Summer 2011
+			</div>		
+		</div>
+		<div id="worksPhoto">
+			<%= image_tag "temp/work1.jpg" %>
+			<div id="worksPhototitle">
+				Nyxed
+			</div>
+			<div id="worksPhotoSubtitle">
+				Redefining an Iconic Cognac
+			</div>
+			<div id="worksSeason">
+				Summer 2011
+			</div>		
+		</div>
+		<div id="worksPhoto">
+			<%= image_tag "temp/work1.jpg" %>
+			<div id="worksPhototitle">
+				Playboy X Jaguar
+			</div>
+			<div id="worksPhotoSubtitle">
+				Redefining an Iconic Cognac
+			</div>
+			<div id="worksSeason">
+				Summer 2011
+			</div>		
+		</div>
+		<div id="worksPhoto">
+			<%= image_tag "temp/work1.jpg" %>
+			<div id="worksPhototitle">
+				New Era Hats
+			</div>
+			<div id="worksPhotoSubtitle">
+				Redefining an Iconic Cognac
+			</div>
+			<div id="worksSeason">
+				Summer 2011
+			</div>		
+		</div>						
 	</div>
 
 	<div id="titleNews">
 		In The News
 	</div>
+	
+	<div class="spacer"></div>
+
+
+	<div id="newsContainer">
+		
+		<div id="newsItem">
+			<div class="title">
+				<p>
+					This Title Is Serial 
+					<br />
+					<span class="date">
+						March 29, 2012
+					</span>
+				</p>	
+			</div>
+			<%= image_tag "temp/news_1.png" %>	
+			<br />
+			<div class="caption">			
+				Announcing the debut collection launch for New York based design brand - ANVM - entitled ‘Devil In The Detail’. 
+			</div>		
+		</div>
+
+		<div id="newsItem">
+			<div class="title">
+				<p>
+					This Title Is Serial 
+					<br />
+					<span class="date">
+						March 29, 2012
+					</span>
+				</p>	
+			</div>
+			<%= image_tag "temp/news_1.png" %>	
+			<br />
+			<div class="caption">			
+				Announcing the debut collection launch for New York based design brand - ANVM - entitled ‘Devil In The Detail’. 
+			</div>		
+		</div>
+
+		<div id="newsItem">
+			<div class="title">
+				<p>
+					This Title Is Serial 
+					<br />
+					<span class="date">
+						March 29, 2012
+					</span>
+				</p>	
+			</div>
+			<%= image_tag "temp/news_1.png" %>	
+			<br />
+			<div class="caption">			
+				Announcing the debut collection launch for New York based design brand - ANVM - entitled ‘Devil In The Detail’. 
+			</div>		
+		</div>
+
+		<div id="newsItem">
+			<div class="title">
+				<p>
+					This Title Is Serial 
+					<br />
+					<span class="date">
+						March 29, 2012
+					</span>
+				</p>	
+			</div>
+			<%= image_tag "temp/news_1.png" %>	
+			<br />
+			<div class="caption">			
+				Announcing the debut collection launch for New York based design brand - ANVM - entitled ‘Devil In The Detail’. 
+			</div>		
+		</div>
+
+
+	</div>
+	<div class="spacer"></div>
+
+	<div id="twitterContainer">
+		<div id="tweetContainer">
+			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+		</div>
+
+		<div id="tweetContainer">
+			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+		</div>
+
+		<div id="tweetContainer">
+			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+		</div>
+	</div>	
+
+<%= render "shared/footer" %>
 
 </div>
+
+
+
