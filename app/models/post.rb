@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
     :reject_if => lambda { |news_image| news_image[:image].blank? },
     :allow_destroy => true
 
-  attr_accessible :body, :image, :published, :snippet, :title, :video
+  attr_accessible :body, :image, :published, :snippet, :title, :video, :news_images_attributes, :image_cache
 
   mount_uploader :image, ImageUploader
 
