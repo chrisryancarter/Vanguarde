@@ -15,6 +15,12 @@ GIT
       rails (>= 3.0.0)
       sass (>= 3.1.0)
 
+GIT
+  remote: https://github.com/ryanb/nested_form.git
+  revision: ef71a326c27c3583172d72719bb3422e0efc7f0c
+  specs:
+    nested_form (0.2.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -240,6 +246,7 @@ DEPENDENCIES
   factory_girl_rails
   guard-rspec
   jquery-rails
+  nested_form!
   pg
   pry-rails
   rails (= 3.2.3)

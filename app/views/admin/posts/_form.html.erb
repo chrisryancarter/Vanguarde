@@ -1,17 +1,16 @@
-<%= semantic_form_for [:admin, @post], :html => {:multipart => true} do |f| %>
-  <%= f.inputs "New Post" do %>
-    <%= f.input :title %>
-    <%= f.input :image, :as => :file %>
+<%= semantic_nested_form_for [:admin, @post], :html => {:multipart => true} do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :title, :label => false, :input_html => {:placeholder => "Title"} %>
+    <%= f.input :image, :label => false, :as => :file %>
     <%= f.hidden_field :image_cache %>
-    <%= f.label :snippet, :class => "label", :style => "float: left; width: 20%; display: block; padding-left: 10px;" %>
-    <div>
-      <%= f.input :snippet, :label => false, :input_html => { :rows => 2, :class => "wysiwyg" } %>
-    </div>
-    <%= f.label :body, :class => "label", :style => "float: left; width: 20%; display: block; padding-left: 10px;"  %>
-    <div>
-      <%= f.input :body, :label => false, :input_html => { :class => "wysiwyg" } %>
-    </div>
+    <%= f.input :snippet, :label => false, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
+    <%= f.input :body, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+    <%= f.fields_for :news_images do |b| %>
+      <%= b.input :image, :as => :file %>
+      <%= b.link_to_remove "Remove image" %>
+    <% end %>
+    <%= f.link_to_add "Add an image", :news_images %>
     <%= f.input :published %>
   <% end %>
-  <%= f.buttons %>
+  <%= f.actions %>
 <% end %>
