@@ -154,10 +154,50 @@ body{
 	font-size: 14px;
 	font-family: 'Futura', Helvetica;
 	font-weight: 100;
+	position:relative;
+}
+
+#nav a{
+	font-size: 14px;
+	font-family: 'Futura', Helvetica;
+	color:#000;
+	text-decoration: none;
+
 }
 
 #nav li:last-child{
 	margin-right: 0px;
+}
+
+#nav ul{
+	background:#fff; 
+	background:rgba(255,255,255,0); 
+	list-style:none;
+	position:absolute;
+	left:-9999px; 
+}
+#nav ul li{
+	padding: 5px; 
+	float:none;
+}
+#nav ul a{
+	white-space:nowrap; 
+}
+#nav li:hover ul{ /* Display the dropdown on hover */
+	left:0; /* Bring back on-screen when needed */
+}
+#nav li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	text-decoration:none;
+}
+#nav li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration:none;
+	background: #000;
+	color:#fff;
+
+
+}
+#nav li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	background:#333;
 }
 
 /* Main Slider */
@@ -447,16 +487,63 @@ body{
 	background-repeat: no-repeat;
 }
 
+#linksLeft {
+	font-family: 'Georgia';
+	font-size: 13px;
+	text-transform: uppercase;
+	font-style: italic;
+	color: #fff;
+	float: left;
+	margin-left:122px;
+  	margin-top:142px;
+}
+
+#linksLeft li{
+	list-style-type: none;	
+	margin-top:6px;
+  	padding-top:6px;
+  	border-top: solid 1px #776e3a;
+	width: 240px;
+	line-height: 18px;
+}
 
 
+#linksRight {
+	font-family: 'Georgia';
+	font-size: 13px;
+	text-transform: uppercase;
+	font-style: italic;
+	color: #fff;
+	float: right;
+	margin-right:122px;
+  	margin-top:142px;
+}
 
+#linksRight li{
+	list-style-type: none;	
+	margin-top:6px;
+  	padding-top:6px;
+  	border-top: solid 1px #776e3a;
+	width: 240px;
+	line-height: 18px;
+	text-align: right;
+}
 
+#linksRight li:first-child, #linksLeft li:first-child {
+  	border-top: none;
+}
 
-
-
-
-
-
+#copyright{
+	margin-top: 10px;
+	font-family: 'Futura';
+	color: #000;
+	width: 260px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+}
 
 
 
