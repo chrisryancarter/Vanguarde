@@ -1,16 +1,23 @@
 <%= semantic_nested_form_for [:admin, @post], :html => {:multipart => true} do |f| %>
   <%= f.inputs do %>
     <%= f.input :title, :label => false, :input_html => {:placeholder => "Title"} %>
-    <%= f.input :image, :label => false, :as => :file %>
-    <%= f.hidden_field :image_cache %>
     <%= f.input :snippet, :label => false, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
     <%= f.input :body, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+    <%= f.input :published %>
+  <% end %>
+  <%= f.inputs "Featured Image" do %>
+    <%= f.input :image, :label => false, :as => :file, :hint => f.template.image_tag(f.object.image.thumb.url) %>
+    <%= f.hidden_field :image_cache %>
+  <% end %>
+  <%= f.inputs "Image Gallery" do %>
     <%= f.fields_for :news_images do |b| %>
-      <%= b.input :image, :as => :file %>
-      <%= b.link_to_remove "Remove image" %>
+      <%= b.input :image, :as => :file, :label => false %>
+      <% unless b.object.image.url.blank? %>
+        <%= b.template.image_tag(b.object.image.thumb.url) %>
+        <%= b.link_to_remove "Remove image" %>
+      <% end %>
     <% end %>
     <%= f.link_to_add "Add an image", :news_images %>
-    <%= f.input :published %>
   <% end %>
   <%= f.actions %>
 <% end %>
