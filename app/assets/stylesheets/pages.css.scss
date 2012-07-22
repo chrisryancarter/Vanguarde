@@ -562,8 +562,7 @@ body{
 	margin:auto;
 	background: #000;
 	margin-top: 30px;
-	padding-top:50px;
-
+	padding-top:19px;
 }
 
 #contactBorder{
@@ -573,15 +572,42 @@ body{
 	margin-left:auto;
 	background: #000;
 	border: solid #fff 1px;
-
+	font-family: 'Futura';
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
 }
 
+#contactBorder a{
+	font-family: 'Georgia';
+	font-style: italic;
+	text-decoration: none;
+	font-size: 17px;
+	line-height: 40px;
+	color: #fff;
+}
 
+#contactContainer .header{
+	margin-bottom: 20px;
+}
 
+#contactContainer .orn{
+	margin-bottom: 20px;
+}
 
+#contactBorder .left{
+	width:330px;
+	float:left;
+	margin-left: 150px;
+	margin-top:50px;
+}
 
-
-
+#contactBorder .right{
+	width:330px;
+	float:right;
+	margin-right: 150px;
+	margin-top:50px;
+}
 
 
 
