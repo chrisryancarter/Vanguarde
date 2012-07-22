@@ -27,55 +27,21 @@
 	</div>
 
 	<div id="worksContainer">
-		<div id="worksPhoto">
-			<%= image_tag "temp/work1.jpg" %>
-			<div id="worksPhototitle">
-				COURVOISIER
-			</div>
-			<div id="worksPhotoSubtitle">
-				Redefining an Iconic Cognac
-			</div>
-			<div id="worksSeason">
-				Summer 2011
-			</div>		
-		</div>
-		<div id="worksPhoto">
-			<%= image_tag "temp/work1.jpg" %>
-			<div id="worksPhototitle">
-				Nyxed
-			</div>
-			<div id="worksPhotoSubtitle">
-				Redefining an Iconic Cognac
-			</div>
-			<div id="worksSeason">
-				Summer 2011
-			</div>		
-		</div>
-		<div id="worksPhoto">
-			<%= image_tag "temp/work1.jpg" %>
-			<div id="worksPhototitle">
-				Playboy X Jaguar
-			</div>
-			<div id="worksPhotoSubtitle">
-				Redefining an Iconic Cognac
-			</div>
-			<div id="worksSeason">
-				Summer 2011
-			</div>		
-		</div>
-		<div id="worksPhoto">
-			<%= image_tag "temp/work1.jpg" %>
-			<div id="worksPhototitle">
-				New Era Hats
-			</div>
-			<div id="worksPhotoSubtitle">
-				Redefining an Iconic Cognac
-			</div>
-			<div id="worksSeason">
-				Summer 2011
-			</div>		
-		</div>						
-	</div>
+    <% @works.each do |work| %>
+      <div id="worksPhoto">
+        <%= image_tag work.featured_image.url %>
+        <div id="worksPhototitle">
+          <%= work.title %>
+        </div>
+        <div id="worksPhotoSubtitle">
+          <%= work.subtext %>
+        </div>
+        <div id="worksSeason">
+          <%= work.season %>
+        </div>		
+      </div><!-- worksPhoto -->
+    <% end %>
+	</div><!-- worksContainer -->
 
 	<div id="titleNews">
 		In The News
@@ -86,76 +52,30 @@
 
 	<div id="newsContainer">
 		
-		<div id="newsItem">
-			<div class="title">
-				<p>
-					This Title Is Serial 
-					<br />
-					<span class="date">
-						March 29, 2012
-					</span>
-				</p>	
-			</div>
-			<%= image_tag "temp/news_1.png" %>	
-			<br />
-			<div class="caption">			
-				Announcing the debut collection launch for New York based design brand - ANVM - entitled ‘Devil In The Detail’. 
-			</div>		
-		</div>
+    <% @posts.each do |post| %>
 
-		<div id="newsItem">
-			<div class="title">
-				<p>
-					This Title Is Serial 
-					<br />
-					<span class="date">
-						March 29, 2012
-					</span>
-				</p>	
-			</div>
-			<%= image_tag "temp/news_1.png" %>	
-			<br />
-			<div class="caption">			
-				Announcing the debut collection launch for New York based design brand - ANVM - entitled ‘Devil In The Detail’. 
-			</div>		
-		</div>
+      <div id="newsItem">
+        <div class="title">
+          <p>
+            This Title Is Serial 
+            <%= post.title %>
+            <br />
+            <span class="date">
+              post.created_at.getlocal.strftime("%b %e, %Y")
+            </span>
+          </p>	
+        </div>
+        <%= image_tag post.image %>	
+        <br />
+        <div class="caption">			
+          <%= post.snippet %>
+        </div>		
+      </div>
 
-		<div id="newsItem">
-			<div class="title">
-				<p>
-					This Title Is Serial 
-					<br />
-					<span class="date">
-						March 29, 2012
-					</span>
-				</p>	
-			</div>
-			<%= image_tag "temp/news_1.png" %>	
-			<br />
-			<div class="caption">			
-				Announcing the debut collection launch for New York based design brand - ANVM - entitled ‘Devil In The Detail’. 
-			</div>		
-		</div>
+    <% end %>
 
-		<div id="newsItem">
-			<div class="title">
-				<p>
-					This Title Is Serial 
-					<br />
-					<span class="date">
-						March 29, 2012
-					</span>
-				</p>	
-			</div>
-			<%= image_tag "temp/news_1.png" %>	
-			<br />
-			<div class="caption">			
-				Announcing the debut collection launch for New York based design brand - ANVM - entitled ‘Devil In The Detail’. 
-			</div>		
-		</div>
+  </div><!-- /newsContainer -->
 
-
-	</div>
 	<div class="spacer"></div>
 
 	<div id="twitterContainer">
