@@ -69,6 +69,16 @@ body{
  	src: url('fonts/Futura.otf');
  }
 
+.georgia{
+	font-family:'Georgia';
+	font-style: italic;
+
+}
+
+.futura{
+	font-family:'Georgia';
+}
+
 
 /* Header */
 
@@ -727,6 +737,58 @@ body{
 #newsSingle #main img{
 	width: 980px;
 }
+
+/* About */
+#aboutContainer{
+	width: 1100px;
+	min-height:6000px;
+	background: black;
+	margin:auto;
+	position: relative;
+}
+
+.aboutHeader{
+	margin-left:  33px;
+	margin-top:25px;
+}
+
+.aboutText{
+	width:750px;
+	margin-top:25px;
+	font-size: 14px;
+	color: #fff;
+	font-size: 16px;
+	line-height:23px;
+  	margin-left:176px;
+	text-align: center;
+}
+
+
+#toggleTitle{
+	font-family: 'Futura';
+	color: #fff;
+	font-size: 20px;
+	width: 310px;
+	text-align: center;
+	margin: auto;
+	text-transform: uppercase;
+}
+
+
+#toggleTitle .show_hide{
+	width:15px;
+	height:15px;
+	color:#000;
+	background: #fff;
+	font-family: 'Helvetica';
+	font-weight: bold;
+	font-size: 18px;
+	float: left;
+	display: block;
+}
+
+
+
 
 /* Twitter */
 

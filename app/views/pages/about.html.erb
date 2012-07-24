@@ -1,16 +1,54 @@
+<script type="text/javascript">
+$(document).ready(function(){
+   $('.show_hide').showHide({      
+    speed: 1000,   
+    easing: '', 
+    changeText: 1, 
+    showText: '+',// the button text to show when a div is closed
+    hideText: '-' // the button text to show when a div is open       
+  }); 
+});
+</script>
 <div id="mainContainer">
 	<%= render "shared/header" %>
 
-		
+		<div id="aboutContainer">
+				<%= image_tag "about/header.png", :class => "aboutHeader" %>
+			<div class="aboutText georgia">
+				The Vanguarde Craft &amp; Creative is a boutique DesignStrategy &amp; Communications Consultancy based in New York City.
+				<br />
+				<br />
+				Established in 2008, The Vanguarde has enlisted noble talent to join our in-house creative team based upon their expertise, artistry and vision. Our team is comprised of seasoned strategists and business minds, working parallel with ground-breaking artists and designers to offer our clients a comprehensive single service platform.
+				<br />
+				<br />
+				The Vanguarde Craft &amp; Creative delivers bespoke creative solutions to today's leading brands, global enterprises, and to our in-house brands and intelle
+			</div>
+				
+			<%= image_tag "about/about_2.png", :class => "aboutHeader" %>
 
-	
-	<div id="contactContainer">
-		dsadasdasda
-	</div>	
+			<div class="aboutText georgia">
+				‘DesignStrategy’ is what drives and informs the development of our brand,
+				<br /> operational, and marketing strategies.
+			</div>
+
+				<div id="toggleTitle">
+					<a class="show_hide" href="#" rel="#slidingDiv">+</a> Visual Position Mapping
+				</div>	
+				<div id="slidingDiv" class="toggleDiv aboutText georgia" style="display: none;">
+					The bespoke and comprehensive set of services we offer are informed by three essential elements: a deep understanding of the behavior, values, and attitudes of the target customer, identification of the brand and/or company's core values (Brand DNA), and recognition of the time-based trends that are the current backdrop for the product or service experience. This combined information allows us to develop a brand language and strategic operational/ marketing initiatives that are specific, unique, and relevant to the Brand message.
+				</div>
+				
 
 
 
-	
+
+				 <a class="show_hide" href="#" rel="#slidingDiv_2">+</a></pre>
+				<div id="slidingDiv_2" class="toggleDiv" style="display: none;">Fill this space with really interesting content.</div>
+
+
+
+		</div>
+
 	<%= render "shared/footer" %>
 </div>
 
