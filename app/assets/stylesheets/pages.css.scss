@@ -76,9 +76,12 @@ body{
 }
 
 .futura{
-	font-family:'Georgia';
+	font-family:'Futura';
 }
 
+.white{
+	color: #fff;
+}
 
 /* Header */
 
@@ -787,7 +790,53 @@ body{
 	display: block;
 }
 
+.collapsible,
+.page_collapsible,
+.accordion {
+	font-family: 'Futura';
+	color: #fff;
+	font-size: 20px;
+	width: 310px;
+	text-align: center;
+	margin: auto;
+	text-transform: uppercase;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
 
+.accordion-open,.collapse-open {
+    color: #fff; 
+}
+
+.accordion-open span, .collapse-open span {
+    display:block;
+    float: left;
+    width: 15px;
+    height: 15px; 
+}
+
+
+.accordion-open span, .collapse-open span {
+    background:url('about/collapse.png');
+    background-position:  top;   
+}
+
+.accordion-close span, .collapse-close span {
+    display:block;
+    float:left;
+    background:url('about/collapse.png');
+    background-position: bottom;
+    width: 15px;
+    height: 15px;     
+
+}
+
+.goldDiv{
+	margin-bottom:40px;
+  	margin-left:318px;
+  	margin-top:40px;
+
+}
 
 
 /* Twitter */

@@ -1,14 +1,12 @@
 <script type="text/javascript">
-$(document).ready(function(){
-   $('.show_hide').showHide({      
-    speed: 1000,   
-    easing: '', 
-    changeText: 1, 
-    showText: '+',// the button text to show when a div is closed
-    hideText: '-' // the button text to show when a div is open       
-  }); 
-});
+    $(document).ready(function() {
+        //collapsible management
+        $('.collapsible').collapsible({
+            defaultOpen: 'section1,section3'
+        });
+    });
 </script>
+
 <div id="mainContainer">
 	<%= render "shared/header" %>
 
@@ -31,19 +29,67 @@ $(document).ready(function(){
 				<br /> operational, and marketing strategies.
 			</div>
 
-				<div id="toggleTitle">
-					<a class="show_hide" href="#" rel="#slidingDiv">+</a> Visual Position Mapping
-				</div>	
-				<div id="slidingDiv" class="toggleDiv aboutText georgia" style="display: none;">
-					The bespoke and comprehensive set of services we offer are informed by three essential elements: a deep understanding of the behavior, values, and attitudes of the target customer, identification of the brand and/or company's core values (Brand DNA), and recognition of the time-based trends that are the current backdrop for the product or service experience. This combined information allows us to develop a brand language and strategic operational/ marketing initiatives that are specific, unique, and relevant to the Brand message.
-				</div>
 				
+					<h3 class="collapsible" id="section9">OUR SERVICE PLATFORM<span></span></h3>
+				
+					<div class="container futura aboutText">
+    					<div class="content" >
+							The bespoke and comprehensive set of services we offer are informed by three essential elements: a deep understanding of the behavior, values, and attitudes of the target customer, identification of the brand and/or company's core values (Brand DNA), and recognition of the time-based trends that are the current backdrop for the product or service experience. This combined information allows us to develop a brand language and strategic operational/ marketing initiatives that are specific, unique, and relevant to the Brand message.
+							<br />
+							<br />
+							<%= image_tag "about/visualPosition.png"%>
+							<br />
+							<br />
+							To fully realize these benchmarks, we offer our clients a single service platform comprised of two parts. 
+							<br />
+							<br />
+							Visual Position Mapping speaks to the graphic services that we utilize to create the visual tone of a brand and it's creative requirements; Operational Market Strategy addresses the strategic, functional, and operational aspects of developing brand-led initiatives from conception into public-facing entities.
+						</div>
+					</div>		
+					
+					<%= image_tag "about/goldDiv.png", :class => "goldDiv" %>
+
+					<h3 class="collapsible" id="section2">VISUAL POSITION MAPPING<span></span></h3>
+				
+					<div class="container futura aboutText">
+    					<div class="content" >
+							Visual Position Mapping is the strategic tool that determines the visual tone of a brand against other similar brands. Our team of creative professionals offer a wide range of Art & Design services that we utilize to create the optimal visual/brand language that is specific and unique to the brand and its target customer. We understand that for a brand (initiative) to be successful, there needs to be a true connection with the consumer, one that will allow the visual message of a brand to be relevant and to evolve.
+							<br />
+							<br />
+							<%= image_tag "about/visualPosition2.png"%>
+							<br />
+							<br />
+							Visual Position Mapping as a strategic tool consists of four features: Core Values, Visual Positioning, Design Elements, and Signature Elements. Our design team works to identify and establish a brand's DNA, and develop a comprehensive visual brand language for our client.
+							<br />
+							<br />
+							This key service can be applied across a wide range of mediums.
+						</div>
+					</div>		
+
+					<%= image_tag "about/goldDiv.png", :class => "goldDiv" %>
 
 
+					<h3 class="collapsible" id="section3">OPERATIONAL MARKET STRATEGY<span></span></h3>
+				
+					<div class="container futura aboutText">
+    					<div class="content" >
+							Operational Market Strategy is the process and method of validating a brand's position within the experiential and digital marketplace (public-facing and internal). We work with our clients on three levels:
+							<br />
+							<br />
+							<%= image_tag "about/operational.png"%>
+							<br />
+							<br />
+							1) Design the market strategies and brand-led initiatives to engage the target customer with a new or existing product/service.
+							<br />
+							<br />
+							2) Design an optimal internal company process to improve the efficiency and operating procedures through insights on corporate culture, initiatives, and behaviors.
+							<br />
+							<br />
+							3) Develop, monitor, and measure the effectiveness of a brand's digital communications within social networks by optimizing public-facing initiatives, and actively connecting with the target customer in real time. [See Digital Strategy]
+						</div>
+					</div>		
 
-
-				 <a class="show_hide" href="#" rel="#slidingDiv_2">+</a></pre>
-				<div id="slidingDiv_2" class="toggleDiv" style="display: none;">Fill this space with really interesting content.</div>
+			<%= image_tag "about/about_2.png", :class => "aboutHeader" %>
 
 
 
