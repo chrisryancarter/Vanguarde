@@ -72,10 +72,20 @@
       <div class="spacer"></div>
     
     </div>
-      <%= image_tag "temp/largeProject.jpg", :class => "large" %>
-      <div class="controls">
-        Controls Go Here
-      </div>  
+    <div id="slides2">
+        <div class="slides_container">
+          <div class="slide">
+            <%= image_tag "temp/largeProject.jpg", :class => "large" %>
+          </div>
+          <div class="slide">
+            <%= image_tag "temp/largeProject.jpg", :class => "large" %>
+          </div>
+          <div class="slide">
+            <%= image_tag "temp/largeProject.jpg", :class => "large" %>
+          </div>
+        </div>
+    </div>  
+     
       <div class="tagImage">
         <%= image_tag "temp/resortCollection.jpg" %>
       </div>  
@@ -146,17 +156,23 @@
       $('#slides').slides({
         preload: true,
         preloadImage: 'images/slider/loading.gif',
+        generatePagination: false,
+        play: 5000,
+        pause: 100,
+        hoverPause: true,
+      });
+
+      $('#slides2').slides({
+        preload: true,
+        preloadImage: 'images/slider/loading.gif',
         generatePagination: true,
         play: 5000,
         pause: 100,
         hoverPause: true,
-        // Get the starting slide
-        start: startSlide,
-        animationComplete: function(current){
-          // Set the slide number as a hash
-          window.location.hash = '#' + current;
-        }
+
+      
       });
+
     });
   </script>
 
