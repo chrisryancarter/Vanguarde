@@ -57,6 +57,6 @@ module Vangaurde
     config.assets.version = '1.0'
 
     # Recommended by Active Admin
-    config.assets.initialize_on_precompile = false
+    #config.assets.initialize_on_precompile = false
   end
 end
