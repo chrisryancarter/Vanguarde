@@ -1,2 +1,170 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //collapsible management
+        $('.collapsible').collapsible({
+            defaultOpen: 'section1,section3'
+        });
+    });
+</script>
+
+<div id="mainContainer">
+	<%= render "shared/header" %>
+
+		<div id="aboutContainer">
+				<%= image_tag "about/header.png", :class => "aboutHeader" %>
+			<div class="aboutText georgia">
+				The Vanguarde Craft &amp; Creative is a boutique DesignStrategy &amp; Communications Consultancy based in New York City.
+				<br />
+				<br />
+				Established in 2008, The Vanguarde has enlisted noble talent to join our in-house creative team based upon their expertise, artistry and vision. Our team is comprised of seasoned strategists and business minds, working parallel with ground-breaking artists and designers to offer our clients a comprehensive single service platform.
+				<br />
+				<br />
+				The Vanguarde Craft &amp; Creative delivers bespoke creative solutions to today's leading brands, global enterprises, and to our in-house brands and intelle
+			</div>
+				
+			<%= image_tag "about/about_2.png", :class => "aboutHeader" %>
+
+			<div class="aboutText georgia">
+				‘DesignStrategy’ is what drives and informs the development of our brand,
+				<br /> operational, and marketing strategies.
+			</div>
+
+				
+					<h3 class="collapsible" id="section9">OUR SERVICE PLATFORM<span></span></h3>
+				
+					<div class="container futura aboutText">
+    					<div class="content" >
+							The bespoke and comprehensive set of services we offer are informed by three essential elements: a deep understanding of the behavior, values, and attitudes of the target customer, identification of the brand and/or company's core values (Brand DNA), and recognition of the time-based trends that are the current backdrop for the product or service experience. This combined information allows us to develop a brand language and strategic operational/ marketing initiatives that are specific, unique, and relevant to the Brand message.
+							<br />
+							<br />
+							<%= image_tag "about/visualPosition.png"%>
+							<br />
+							<br />
+							To fully realize these benchmarks, we offer our clients a single service platform comprised of two parts. 
+							<br />
+							<br />
+							Visual Position Mapping speaks to the graphic services that we utilize to create the visual tone of a brand and it's creative requirements; Operational Market Strategy addresses the strategic, functional, and operational aspects of developing brand-led initiatives from conception into public-facing entities.
+						</div>
+					</div>		
+					
+					<%= image_tag "about/goldDiv.png", :class => "goldDiv" %>
+
+					<h3 class="collapsible" id="section2">VISUAL POSITION MAPPING<span></span></h3>
+				
+					<div class="container futura aboutText">
+    					<div class="content" >
+							Visual Position Mapping is the strategic tool that determines the visual tone of a brand against other similar brands. Our team of creative professionals offer a wide range of Art & Design services that we utilize to create the optimal visual/brand language that is specific and unique to the brand and its target customer. We understand that for a brand (initiative) to be successful, there needs to be a true connection with the consumer, one that will allow the visual message of a brand to be relevant and to evolve.
+							<br />
+							<br />
+							<%= image_tag "about/visualPosition2.png"%>
+							<br />
+							<br />
+							Visual Position Mapping as a strategic tool consists of four features: Core Values, Visual Positioning, Design Elements, and Signature Elements. Our design team works to identify and establish a brand's DNA, and develop a comprehensive visual brand language for our client.
+							<br />
+							<br />
+							This key service can be applied across a wide range of mediums.
+						</div>
+					</div>		
+
+					<%= image_tag "about/goldDiv.png", :class => "goldDiv" %>
+
+
+					<h3 class="collapsible" id="section4">OPERATIONAL MARKET STRATEGY<span></span></h3>
+				
+					<div class="container futura aboutText">
+    					<div class="content" >
+							Operational Market Strategy is the process and method of validating a brand's position within the experiential and digital marketplace (public-facing and internal). We work with our clients on three levels:
+							<br />
+							<br />
+							<%= image_tag "about/operational.png"%>
+							<br />
+							<br />
+							1) Design the market strategies and brand-led initiatives to engage the target customer with a new or existing product/service.
+							<br />
+							<br />
+							2) Design an optimal internal company process to improve the efficiency and operating procedures through insights on corporate culture, initiatives, and behaviors.
+							<br />
+							<br />
+							3) Develop, monitor, and measure the effectiveness of a brand's digital communications within social networks by optimizing public-facing initiatives, and actively connecting with the target customer in real time. [See Digital Strategy]
+						</div>
+					</div>		
+
+			<%= image_tag "about/goldDiv2.png", :class => "goldDiv2" %>
+
+			<%= image_tag "about/about_3.png", :class => "aboutHeader" %>
+				
+				<div class="aboutText georgia">
+					The Vanguarde has developed an algorithmic structure of listening and monitoring an entity's and/or brands audience engagement within the social digital space. This tool was developed to measure consumer impressions, conversation lifecycles, and the drivers that push a current and/or potential consumer to point of purchase.
+				</div>
+				
+				<h3 class="collapsible" id="section4">SOCIAL COMMUNICATIONS &amp; LISTENING<span></span></h3>
+				
+					<div class="container futura aboutText">
+    					<div class="content" >
+							The Vanguarde Craft and Creative have built proprietary systems to identify the true influencers within a respective sub-culture. Through cultural context and sophisticated listening tools, we find purpose and identify the active participants of culture that drive interest amongst a community. 
+							<br />
+							<br />
+							Influencer driven campaigns are currently utilized by top tier global brands as a means of organically tapping in and communicating with the influencer's built-in audience.
+							<br />
+							<br />
+							<%= image_tag "about/key.png" , :class => "key"%>
+							<br />
+							<br />
+							<span class="georgia">
+							Command Center Development<br />
+							Technology Recommendations<br />
+							Action Plan and Protocols for Listening<br />
+							Community Management<br />
+							Real Time Data and Analytics<br />
+							Contextual Creative Direction<br />
+							Detailed Reporting<br />
+						</span>
+						</div>
+					</div>	
+
+					<div class="container futura aboutText">
+    					<div class="content" >
+							The Vanguarde Craft and Creative have built proprietary systems to identify the true influencers within a respective sub-culture. Through cultural context and sophisticated listening tools, we find purpose and identify the active participants of culture that drive interest amongst a community. 
+							<br />
+							<br />
+							Influencer driven campaigns are currently utilized by top tier global brands as a means of organically tapping in and communicating with the influencer's built-in audience.
+							<br />
+							<br />
+							<%= image_tag "about/key.png" , :class => "key"%>
+							<br />
+							<br />
+							<span class="georgia">
+							Command Center Development<br />
+							Technology Recommendations<br />
+							Action Plan and Protocols for Listening<br />
+							Community Management<br />
+							Real Time Data and Analytics<br />
+							Contextual Creative Direction<br />
+							Detailed Reporting<br />
+						</span>
+						</div>
+					</div>						
+
+			<%= image_tag "about/goldDiv2.png", :class => "goldDiv2" %>
+
+			<%= image_tag "about/about_4.png", :class => "aboutHeader"  %>
+				<div class="aboutText georgia">
+					The Vanguarde Craft &amp; Creative is a single service platform. Our in-house team handles all of the work - from Strategy development and Creative Direction, to establishing Marketing Platforms, in addition to all Art &amp; Design requirements for our client projects. These integral abilities create the competitive advantage of SPEED and CONSISTENCY.
+				</div>
+				<br />
+				<br />
+				<%= image_tag "about/about_5.png", :class => "aboutHeader aboutText" %>
+				<br />
+				<br />
+				<%= image_tag "about/about_6.png", :class => "aboutHeader" %>				
+				<div class="aboutText georgia">	
+					The Vanguarde Craft &amp; Creative have successfully delivered creative solutions and marketing platforms to many of the world’s largest companies &amp; brands.	
+				</div>			
+				
+				<%= image_tag "about/about_7.png", :class => "clients" %>				
+		
+		</div>
+
+	<%= render "shared/footer" %>
+</div>
+
