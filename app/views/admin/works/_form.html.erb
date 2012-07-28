@@ -1,11 +1,23 @@
 <%= semantic_nested_form_for [:admin, @work], :html => {:multipart => true} do |f| %>
-  <%= f.inputs do %>
+  <%= f.inputs "Title" do %>
     <%= f.input :title, :label => false, :input_html => {:placeholder => "Title"} %>
+  <% end %>
+  <%= f.inputs "Subtitle" do %>
     <%= f.input :subtext, :label => false, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
+  <% end %>
+  <%= f.inputs "Body" do %>
     <%= f.input :fulltext, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+  <% end %>
+  <%= f.inputs "Project Scope" do %>
     <%= f.input :project_scope, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+  <% end %>
+  <%= f.inputs "Credits" do %>
     <%= f.input :credits, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+  <% end %>
+  <%= f.inputs "Season" do %>
     <%= f.input :season, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+  <% end %>
+  <%= f.inputs "Select for homepage" do %>
     <%= f.input :selected %>
   <% end %>
   <%= f.inputs "Featured Image" do %>
