@@ -1,7 +1,13 @@
 // Active Admin CSS Styles
+body.active_admin ul.wysihtml5-toolbar {
+  @import "bootstrap";
+}
 body.active_admin {
   @import "bootstrap-wysihtml5";
-  @import "bootstrap";
+  a.btn, a:link.btn, a:visited.btn {
+    color: #333;
+    text-decoration: none;
+  }
 }
 @import "active_admin/mixins";
 @import "active_admin/base";
@@ -9,29 +15,3 @@ body.active_admin {
 // To customize the Active Admin interfaces, add your
 // styles here:
 
-body.active_admin {
-  a.btn, a:link.btn, a:visited.btn {
-    color: #333;
-    text-decoration: none;
-  }
-  .label {
-    font-size: 12px;
-    font-weight: normal;
-    color: #333;
-    text-shadow: none;
-    background: none;
-    float: none;
-  }
-  .breadcrumb {
-    padding: 0;
-    margin: 0 0 12px 0;
-    background: none;
-    border: none;
-    filter: none;
-    border-radius: none;
-    box-shadow: none;
-  }
-  #page_title {
-    line-height: 18px;
-  }
-}
