@@ -76,7 +76,9 @@ temp/topslide_1.jpg: temp/topslide_1-a2a13cca3aac9ac88358e727ca79b32b.jpg
 temp/topslide_2.jpg: temp/topslide_2-1103274e50257acc905127ba1f1b7acd.jpg
 temp/work1.jpg: temp/work1-b65258434bfa298e753ab2c33b5c5612.jpg
 twitterHeader.jpg: twitterHeader-0eff3eaf0c3c5e316666dc0e221843c7.jpg
+active_admin.js: active_admin-6adf76ae5ad49fe59146fbf423453d24.js
 application.js: application-a5196daf8e688ff2ad4af3c329a8660b.js
+active_admin.css: active_admin-269212a1161c9475719dbcf00c282258.css
 application.css: application-e4bc34693aa0db54c893246ea4b09db9.css
 img/glyphicons-halflings.png: img/glyphicons-halflings-0e7ff93d8f48fe1f5f762e4312e78da7.png
 mussica/musica-webfont.eot: mussica/musica-webfont-3286eea067f12f6dd5120e6b4fbcbaeb.eot
