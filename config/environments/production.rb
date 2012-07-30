@@ -66,5 +66,5 @@ Vangaurde::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # Active admine
-  config.assets.precompile += %w[active_admin.css active_admin/print.cs active_admin.js]
+  config.assets.precompile += %w[active_admin.css active_admin/print.css active_admin.js]
 end
