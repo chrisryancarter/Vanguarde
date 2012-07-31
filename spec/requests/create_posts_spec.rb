@@ -12,6 +12,7 @@ describe "CreatePosts" do
     fill_in "post_title", :with => "Test post"
     fill_in "post_body", :with => "Test post body content"
     fill_in "post_snippet", :with => "Post snippet"
+    attach_file "featured_image", File.expand_path("spec/requests/images/image1.png")
     click_button "Create Post"
   end
 end
