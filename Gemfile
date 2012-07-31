@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 gem 'rmagick'
+gem "fog", "~> 1.3.1"
 
 
 # Gems used only for assets and not required
