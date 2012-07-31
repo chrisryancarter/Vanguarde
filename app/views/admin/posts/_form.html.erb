@@ -9,6 +9,7 @@
     <%= f.input :image, :label => false, :as => :file#, :hint => f.template.image_tag(f.object.image.thumb.url) %>
     <% unless f.object.image.url.blank? %>
       <%= f.template.image_tag(f.object.image.thumb.url) %>
+    <% end %>
     <%= f.hidden_field :image_cache %>
   <% end %>
   <%= f.inputs "Image Gallery" do %>

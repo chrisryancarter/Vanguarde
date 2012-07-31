@@ -24,12 +24,14 @@
     <%= f.input :featured_image, :label => false, :as => :file#, :hint => f.template.image_tag(f.object.featured_image.thumb.url) %>
     <% unless f.object.featured_image.url.blank? %>
       <%= f.template.image_tag(f.object.featured_image.thumb.url) %>
+    <% end %>
     <%= f.hidden_field :featured_image_cache %>
   <% end %>
   <%= f.inputs "Logo" do %>
     <%= f.input :logo, :label => false, :as => :file#, :hint => f.template.image_tag(f.object.logo.thumb.url) %>
     <% unless f.object.logo.url.blank? %>
       <%= f.template.image_tag(f.object.logo.thumb.url) %>
+    <% end %>
     <%= f.hidden_field :logo_cache %>
   <% end %>
   <%= f.inputs "Image Gallery" do %>
