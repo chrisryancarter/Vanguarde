@@ -3,7 +3,7 @@ CarrierWave.configure do |config|
     :provider               => 'AWS',       # required
     :aws_access_key_id      => 'AKIAJ553O2BTMIUBD45A',       # required
     :aws_secret_access_key  => '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',       # required
-    :region                 => 'es-east-1'  # optional, defaults to 'us-east-1'
+    :region                 => 'us-east-1'  # optional, defaults to 'us-east-1'
   }
   config.fog_directory  = 'vanguarde'                     # required
   #config.fog_host       = 'https://assets.example.com'            # optional, defaults to nil
