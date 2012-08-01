@@ -1,0 +1,4 @@
+console.log("show work");
+$work = $("<%= escape_javascript(render(@work)) %>");
+$("#worksExpand").empty();
+$("#worksExpand").append($work);

@@ -1,0 +1,54 @@
+<%= image_tag "home/close.jpg", :class => "close" %>
+<div class="divider"></div>
+
+<div id="info">
+  <div id="text">
+    <h1><%= work.title %></h1>
+    <span class="subtext">
+      <%= work.subtext %>
+    </span>
+    <span class="date">
+      <%= work.season %>
+    </span> 
+      <div id="miniDiv"></div>
+    <div id="content">
+      <%= work.fulltext %>
+    </div>
+  </div>
+  <div id="scope">
+    <span class="tags">  
+      <%= work.project_scope %>
+    </span>
+    <br />
+    <br />
+    <br />
+    <span class="creator">  
+      <%= work.credits %>
+    </span>
+  </div>    
+  <br />
+  <br />
+  <div id="link">
+    <a href="#">view the nycked resort 2012 lookbook</a>
+  </div> 
+ 
+  <div class="spacer"></div>
+</div>
+
+<div id="slides2">
+  <div class="slides_container">
+    <div class="slide">
+      <%= image_tag "temp/largeProject.jpg", :class => "large" %>
+    </div>
+    <div class="slide">
+      <%= image_tag "temp/largeProject.jpg", :class => "large" %>
+    </div>
+    <div class="slide">
+      <%= image_tag "temp/largeProject.jpg", :class => "large" %>
+    </div>
+  </div>
+</div>  
+ 
+<div class="tagImage">
+  <%= image_tag work.logo.url %>
+</div>  
