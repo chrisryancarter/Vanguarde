@@ -1,4 +1,5 @@
-console.log("show work");
 $work = $("<%= escape_javascript(render(@work)) %>");
-$("#worksExpand").empty();
-$("#worksExpand").append($work);
+$("#worksExpand").empty().append($work);
+if ($("#worksExpand").is(":hidden")) {
+  $("#worksExpand").slideDown('fast');
+}
