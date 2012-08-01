@@ -11,7 +11,7 @@ gem 'pry-rails', :group => :development
 gem 'rspec-rails', :group => [:test, :development]
 gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git'
 gem 'carrierwave'
-gem 'bootstrap-wysihtml5-rails'
+gem 'bootstrap-wysihtml5-rails', "~> 0.3.0"
 gem 'jquery-rails'
 gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
