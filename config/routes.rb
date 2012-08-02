@@ -6,6 +6,7 @@ Vangaurde::Application.routes.draw do
 
   root :to => "pages#home"
   resources :works
+  resources :posts
 
   # (Mostly) Static Pages
   get "about" => 'pages#about'
