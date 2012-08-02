@@ -16,23 +16,25 @@
 
   <div id="worksContainer">
     <% @works.each do |work| %>
-      <div id="worksPhoto">
-        <%= image_tag work.featured_image.url %>
-        <div id="worksPhototitle">
-          <%= link_to work.title, "/works/#{work.id}.js", :remote => true %>
-        </div>
-        <div id="worksPhotoSubtitle">
-          <%= work.subtext %>
-        </div>
-        <div id="worksSeason">
-          <%= work.season %>
-        </div>    
-      </div><!-- worksPhoto -->
+      <%= link_to "/works/#{work.id}.js", :remote => true do %>
+        <div id="worksPhoto">
+          <%= image_tag work.featured_image.url %>
+          <div id="worksPhototitle">
+            <%= work.title %>
+          </div>
+          <div id="worksPhotoSubtitle">
+            <%= work.subtext %>
+          </div>
+          <div id="worksSeason">
+            <%= work.season %>
+          </div>    
+        </div><!-- worksPhoto -->
+      <% end %>
     <% end %>
   </div><!-- worksContainer -->
 
-<div id="worksExpand">
-</div><!-- worksExpanded -->
+  <div id="worksExpand">
+  </div><!-- worksExpanded -->
 
   <div id="titleNews">
     In The News
@@ -44,22 +46,24 @@
   <div id="newsContainer">
     <% @posts.each do |post| %>
 
-      <div id="newsItem">
-        <div class="title">
-          <p>
-            <%= post.title %>
-            <br />
-            <span class="date">
-              <%= post.created_at.getlocal.strftime("%b %e, %Y") %>
-            </span>
-          </p>  
+      <%= link_to post do %>
+        <div id="newsItem">
+          <div class="title">
+            <p>
+              <%= post.title %>
+              <br />
+              <span class="date">
+                <%= post.created_at.getlocal.strftime("%b %e, %Y") %>
+              </span>
+            </p>  
+          </div>
+          <%= image_tag post.image %> 
+          <br />
+          <div class="caption">     
+            <%= post.snippet %>
+          </div>    
         </div>
-        <%= image_tag post.image %> 
-        <br />
-        <div class="caption">     
-          <%= post.snippet %>
-        </div>    
-      </div>
+      <% end %>
 
     <% end %>
   </div><!-- /newsContainer -->
@@ -85,31 +89,31 @@
 </div>
 
 <script type="text/javascript">
-    $(function(){
-      // Set starting slide to 1
-      var startSlide = 1;
-      // Get slide number if it exists
-      if (window.location.hash) {
-        startSlide = window.location.hash.replace('#','');
-      }
-      // Initialize Slides
-      $('#slides').slides({
-        preload: true,
-        preloadImage: 'images/slider/loading.gif',
-        generatePagination: false,
-        play: 5000,
-        pause: 100,
-        hoverPause: true,
-      });
-
-      $('#slides2').slides({
-        preload: true,
-        preloadImage: 'images/slider/loading.gif',
-        generatePagination: true,
-        play: 5000,
-        pause: 100,
-        hoverPause: true,
-      });
-
+  $(function(){
+    // Set starting slide to 1
+    var startSlide = 1;
+    // Get slide number if it exists
+    if (window.location.hash) {
+      startSlide = window.location.hash.replace('#','');
+    }
+    // Initialize Slides
+    $('#slides').slides({
+      preload: true,
+      preloadImage: 'images/slider/loading.gif',
+      generatePagination: false,
+      play: 5000,
+      pause: 100,
+      hoverPause: true,
     });
+
+    $('#slides2').slides({
+      preload: true,
+      preloadImage: 'images/slider/loading.gif',
+      generatePagination: true,
+      play: 5000,
+      pause: 100,
+      hoverPause: true,
+    });
+
+  });
 </script>
