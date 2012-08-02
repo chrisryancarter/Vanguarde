@@ -9,13 +9,13 @@
     <%= f.input :fulltext, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
   <% end %>
   <%= f.inputs "Project Scope" do %>
-    <%= f.input :project_scope, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+    <%= f.input :project_scope, :label => false, :input_html => { :placeholder => "Project scope..", :rows => 2 } %>
   <% end %>
   <%= f.inputs "Credits" do %>
-    <%= f.input :credits, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+    <%= f.input :credits, :label => false, :input_html => { :placeholder => "Body...", :rows => 2 } %>
   <% end %>
   <%= f.inputs "Season" do %>
-    <%= f.input :season, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+    <%= f.input :season, :label => false, :input_html => { :placeholder => "Season...", :rows => 2} %>
   <% end %>
   <%= f.inputs "Select for homepage" do %>
     <%= f.input :selected %>
