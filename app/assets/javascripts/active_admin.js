@@ -7,5 +7,7 @@
 //= require jquery_nested_form
 
 $(document).ready(function() {
-  $('.wysiwyg').wysihtml5();
+  $('.wysiwyg').wysihtml5({
+    "image": false
+  });
 });

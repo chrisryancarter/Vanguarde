@@ -3,6 +3,7 @@
     <%= f.input :title, :label => false, :input_html => {:placeholder => "Title"} %>
     <%= f.input :snippet, :label => false, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
     <%= f.input :body, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+    <%= f.input :video, :label => false %>
     <%= f.input :published %>
   <% end %>
   <%= f.inputs "Featured Image" do %>
