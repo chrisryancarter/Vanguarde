@@ -59,14 +59,19 @@ body{
 
 @font-face {
     font-family: 'Mussica';
-    src: url('http://peloterothemovie.com/musica-webfont.ttf') format('truetype');
+    src: url('musica-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-  @font-face {
+ @font-face {
   	font-family: 'Futura';
- 	src: url('fonts/Futura.otf');
+ 	src: url('Futura.otf');
+ }
+
+ @font-face {
+  	font-family: 'Futura-Con';
+ 	src: url('Futura-Condensed.otf');
  }
 
 .georgia{
@@ -76,7 +81,7 @@ body{
 }
 
 .futura{
-	font-family:'Futura';
+	font-family:'Futura-Con';
 }
 
 .white{

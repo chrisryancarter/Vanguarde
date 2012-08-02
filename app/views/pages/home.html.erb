@@ -2,19 +2,19 @@
 
 <%= render "shared/header" %>
 
-	
-	<object width="1100" height="600" id="tumblr" data="http://vangaurde.tumblr.com/" type="text/html">
-		<p>Your Browser Sucks. Upgrade it! </p>
-	</object>
+  
+  <object width="1100" height="600" id="tumblr" data=" http://vanguardecraft.tumblr.com/" type="text/html">
+    <p>Your Browser Sucks. Upgrade it! </p>
+  </object>
 
-	<div id="titleWork">
-		VANGUARDE WORKS
-	</div>
-	<div id="subTitle">
-		Select Edits
-	</div>
+  <div id="titleWork">
+    VANGUARDE WORKS
+  </div>
+  <div id="subTitle">
+    Select Edits
+  </div>
 
-	<div id="worksContainer">
+  <div id="worksContainer">
     <% @works.each do |work| %>
       <div id="worksPhoto">
         <%= image_tag work.featured_image.url %>
@@ -26,22 +26,22 @@
         </div>
         <div id="worksSeason">
           <%= work.season %>
-        </div>		
+        </div>    
       </div><!-- worksPhoto -->
     <% end %>
-	</div><!-- worksContainer -->
+  </div><!-- worksContainer -->
 
 <div id="worksExpand">
 </div><!-- worksExpanded -->
 
-	<div id="titleNews">
-		In The News
-	</div>
-	
-	<div class="spacer"></div>
+  <div id="titleNews">
+    In The News
+  </div>
+  
+  <div class="spacer"></div>
 
 
-	<div id="newsContainer">
+  <div id="newsContainer">
     <% @posts.each do |post| %>
 
       <div id="newsItem">
@@ -52,33 +52,33 @@
             <span class="date">
               <%= post.created_at.getlocal.strftime("%b %e, %Y") %>
             </span>
-          </p>	
+          </p>  
         </div>
-        <%= image_tag post.image %>	
+        <%= image_tag post.image %> 
         <br />
-        <div class="caption">			
+        <div class="caption">     
           <%= post.snippet %>
-        </div>		
+        </div>    
       </div>
 
     <% end %>
   </div><!-- /newsContainer -->
 
-	<div class="spacer"></div>
+  <div class="spacer"></div>
 
-	<div id="twitterContainer">
-		<div id="tweetContainer">
-			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
-		</div>
+  <div id="twitterContainer">
+    <div id="tweetContainer">
+      The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+    </div>
 
-		<div id="tweetContainer">
-			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
-		</div>
+    <div id="tweetContainer">
+      The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+    </div>
 
-		<div id="tweetContainer">
-			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
-		</div>
-	</div>	
+    <div id="tweetContainer">
+      The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+    </div>
+  </div>  
 
 <%= render "shared/footer" %>
 
@@ -113,4 +113,3 @@
 
     });
 </script>
-
