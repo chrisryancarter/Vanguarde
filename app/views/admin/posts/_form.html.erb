@@ -6,7 +6,10 @@
     <%= f.input :published %>
   <% end %>
   <%= f.inputs "Featured Image" do %>
-    <%= f.input :image, :label => false, :as => :file, :hint => f.template.image_tag(f.object.image.thumb.url) %>
+    <%= f.input :image, :label => false, :as => :file %>
+    <% unless f.object.image.url.blank? %>
+      <%= f.template.image_tag(f.object.image.thumb.url) %>
+    <% end %>
     <%= f.hidden_field :image_cache %>
   <% end %>
   <%= f.inputs "Image Gallery" do %>

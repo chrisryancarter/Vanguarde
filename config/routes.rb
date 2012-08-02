@@ -5,6 +5,7 @@ Vangaurde::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   root :to => "pages#home"
+  resources :works
 
   # (Mostly) Static Pages
   get "about" => 'pages#about'

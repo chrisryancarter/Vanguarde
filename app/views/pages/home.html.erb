@@ -2,147 +2,114 @@
 
 <%= render "shared/header" %>
 
-	
-	<object width="1100" height="600" id="tumblr" data="http://vangaurde.tumblr.com/" type="text/html">
-		<p>Your Browser Sucks. Upgrade it! </p>
-	</object>
+  
+  <object width="1100" height="600" id="tumblr" data="http://vangaurde.tumblr.com/" type="text/html">
+    <p>Your Browser Sucks. Upgrade it! </p>
+  </object>
 
-	<div id="titleWork">
-		VANGUARDE WORKS
-	</div>
-	<div id="subTitle">
-		Select Edits
-	</div>
+  <div id="titleWork">
+    VANGUARDE WORKS
+  </div>
+  <div id="subTitle">
+    Select Edits
+  </div>
 
-	<div id="worksContainer">
+  <div id="worksContainer">
     <% @works.each do |work| %>
       <div id="worksPhoto">
         <%= image_tag work.featured_image.url %>
         <div id="worksPhototitle">
-          <%= work.title %>
+          <%= link_to work.title, "/works/#{work.id}.js", :remote => true %>
         </div>
         <div id="worksPhotoSubtitle">
           <%= work.subtext %>
         </div>
         <div id="worksSeason">
           <%= work.season %>
-        </div>		
+        </div>    
       </div><!-- worksPhoto -->
     <% end %>
-	</div><!-- worksContainer -->
+  </div><!-- worksContainer -->
 
-  <div id="worksExpand">
-    <%= image_tag "home/close.jpg", :class => "close" %>
-    <div class="divider"></div>
+<div id="worksExpand">
+</div><!-- worksExpanded -->
 
-    <div id="info">
-      <div id="text">
-        <h1> Nycked | Resort 2012</h1>
-        <span class="subtext">
-          An Iconic Swimwear Line
-        </span>
-        <span class="date">
-          Summer 2011
-        </span> 
-          <div id="miniDiv"></div>
-        <div id="content">
-          The Vanguarde Craft &amp; Creative were engaged by Lorenzo Martone (Arc NY/Chandelier Creative) and famed jeweler Jules Kim of BijulesNYC to spearhead the overall branding and campaign development for their New York inspired swimwear line, Nycked. We conducted a full re-brand - revitalizing all existing identity systems and updating all of the brand's visual language to succinctly reflect the calibre of swimwear within the new collection.
-          <br />
-          <br />
-          In addition to executing the photography and design of the new Resort 2012 Collection look book, we also developed the brands marketing strategies for the season.
-        </div>
-      </div>
-      <div id="scope">
-          <span class="tags">  
-            Overall Strategy, Marketing, Campaign Development, Identity Development, Overall Design, Typography, Photography
-          </span>
-          <br />
-          <br />
-          <br />
-          <span class="creator">  
-            Photography: Quan Mai.
-          </span>
-      </div>    
-      <br />
-      <br />
-      <div id="link">
-        <a href="#">view the nycked resort 2012 lookbook</a>
-      </div> 
-     
-      <div class="spacer"></div>
-    
-    </div>
-    <div id="slides2">
-        <div class="slides_container">
-          <div class="slide">
-            <%= image_tag "temp/largeProject.jpg", :class => "large" %>
-          </div>
-          <div class="slide">
-            <%= image_tag "temp/largeProject.jpg", :class => "large" %>
-          </div>
-          <div class="slide">
-            <%= image_tag "temp/largeProject.jpg", :class => "large" %>
-          </div>
-        </div>
-    </div>  
-     
-      <div class="tagImage">
-        <%= image_tag "temp/resortCollection.jpg" %>
-      </div>  
-  </div>  
-
-	<div id="titleNews">
-		In The News
-	</div>
-	
-	<div class="spacer"></div>
+  <div id="titleNews">
+    In The News
+  </div>
+  
+  <div class="spacer"></div>
 
 
-	<div id="newsContainer">
-		
+  <div id="newsContainer">
     <% @posts.each do |post| %>
 
       <div id="newsItem">
         <div class="title">
           <p>
-            This Title Is Serial 
             <%= post.title %>
             <br />
             <span class="date">
-              post.created_at.getlocal.strftime("%b %e, %Y")
+              <%= post.created_at.getlocal.strftime("%b %e, %Y") %>
             </span>
-          </p>	
+          </p>  
         </div>
-        <%= image_tag post.image %>	
+        <%= image_tag post.image %> 
         <br />
-        <div class="caption">			
+        <div class="caption">     
           <%= post.snippet %>
-        </div>		
+        </div>    
       </div>
 
     <% end %>
+  </div><!-- /newsContainer -->
 
-  </div><!-- newsContainer -->
+  <div class="spacer"></div>
 
-	<div class="spacer"></div>
+  <div id="twitterContainer">
+    <div id="tweetContainer">
+      The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+    </div>
 
-	<div id="twitterContainer">
-		<div id="tweetContainer">
-			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
-		</div>
+    <div id="tweetContainer">
+      The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+    </div>
 
-		<div id="tweetContainer">
-			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
-		</div>
-
-		<div id="tweetContainer">
-			The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
-		</div>
-	</div>	
+    <div id="tweetContainer">
+      The Vanguarde have released the digital version of their Compendium. <a href="http://t.co/qH13Fegadf">http://t.co/qH13Fegadf</a>
+    </div>
+  </div>  
 
 <%= render "shared/footer" %>
 
 </div>
 
+<script type="text/javascript">
+    $(function(){
+      // Set starting slide to 1
+      var startSlide = 1;
+      // Get slide number if it exists
+      if (window.location.hash) {
+        startSlide = window.location.hash.replace('#','');
+      }
+      // Initialize Slides
+      $('#slides').slides({
+        preload: true,
+        preloadImage: 'images/slider/loading.gif',
+        generatePagination: false,
+        play: 5000,
+        pause: 100,
+        hoverPause: true,
+      });
 
+      $('#slides2').slides({
+        preload: true,
+        preloadImage: 'images/slider/loading.gif',
+        generatePagination: true,
+        play: 5000,
+        pause: 100,
+        hoverPause: true,
+      });
 
+    });
+</script>
