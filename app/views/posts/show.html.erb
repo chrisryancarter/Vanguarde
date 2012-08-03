@@ -4,6 +4,7 @@
 <%= render "shared/header" %>
 
 	<div id="newsSingle">
+
     <%= image_tag "news/header.jpg", :class => "header"  %>
     <div class="divider"></div>
 
@@ -13,9 +14,11 @@
       <span class="date">&#8211; <%= @post.created_at.getlocal.strftime("%b %e, %Y") %></span>
     </div>
 
-    <div id="video">
-      <iframe src="http://player.vimeo.com/video/<%= /vimeo\.com\/(........)/.match(@post.video)[1] %>?byline=0&amp;portrait=0&amp;color=ffffff" width="975" height="731" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-    </div>  
+    <% if @post.video %>
+      <div id="video">
+        <iframe src="http://player.vimeo.com/video/<%= /vimeo\.com\/(........)/.match(@post.video)[1] %>?byline=0&amp;portrait=0&amp;color=ffffff" width="975" height="731" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      </div>
+    <% end %>
 
     <div id="featured">
       <%= image_tag @post.image.url %>
@@ -26,11 +29,14 @@
     </div>
     <div class="spacer"></div>
 
-    <div id="main">
-      <% @post.news_images.each do |image| %>
-        <%= image_tag image.image.url %>
-      <% end %>
-    </div>  
+    <% if @post.news_images %>
+      <div id="main">
+        <% @post.news_images.each do |image| %>
+          <%= image_tag image.image.url %>
+        <% end %>
+      </div>  
+    <% end %>
+
   </div><!-- /newsSingle -->
 
 <%= render "shared/footer" %>
