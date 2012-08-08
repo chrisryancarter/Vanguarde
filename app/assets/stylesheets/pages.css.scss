@@ -244,52 +244,31 @@ body{
 	position:relative;
 }
 
-/*
-	Each slide
-	Important:
-	Set the width of your slides
-	Offeset for the 20px of padding
-	If height not specified height will be set by the slide content
-	Set to display block
-*/
-
-#slides .slide {
-	width:1070px;
-	height:255px;
-	display:block;
+.ui-carousel {
+	height: 100px;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	position: relative; /*for ie7 to work e.g in html carousels*/
+	width: 300px
 }
 
-#slides-two .slide-two {
-	width:1070px;
-	height:800px;
-	display:block;
-}
-/*
-	Next/prev buttons
-*/
-#slides .next,#slides .prev {
-	position:absolute;
-	top:107px;
-	left:-39px;
-	width:24px;
-	height:43px;
-	display:block;
-	z-index:101;
+.ui-carousel > .wrapper {
+    margin: 0;
+    padding: 0;
+    width: 9999px;
 }
 
-#slides .next,#slides .prev {
-	position:absolute;
-	top:107px;
-	left:-39px;
-	width:24px;
-	height:43px;
-	display:block;
-	z-index:101;
+.ui-carousel > .wrapper > * {
+	border: 0;
+	display: block;
+	float: left;
+	height: 100px;
+	overflow: hidden;
+	width: 100px;	
 }
 
-#slides .next {
-	left:585px;
-}
+
 
 /*
 	Pagination
@@ -371,6 +350,28 @@ body{
 	text-decoration: none;
 }
 
+#slideStatic{
+	width: 544px;
+	height:253px;
+	float:right;
+	margin-top:15px;
+	margin-right: 30px;
+}
+
+#slideDynamic{
+	float:left;
+	margin-top:10px;
+	margin-left: 20px;
+	position: relative;
+}
+
+#carousel {
+	width: 514px;
+	height:253px;	
+	overflow: hidden;
+	float: right;
+
+}
 
 /* Tumblr Object */
 
