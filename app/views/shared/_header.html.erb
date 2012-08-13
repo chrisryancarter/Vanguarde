@@ -1,5 +1,52 @@
 <div id="header">
 
+  <div id="date">
+    <script type="text/javascript">
+    <!--
+    var currentTime = new Date()
+    var month = currentTime.getMonth() + 1
+    var day = currentTime.getDay()    
+    var date = currentTime.getDate()
+    var year = currentTime.getFullYear()
+
+
+    var dayName=new Array(7)
+      dayName[0]="Sunday";
+      dayName[1]="Monday";
+      dayName[2]="Tuesday";
+      dayName[3]="Wednesday";
+      dayName[4]="Thursday";
+      dayName[5]="Friday";
+      dayName[6]="Saturday";
+
+    if (date==1) suffix=("st");
+      else if (date==2) suffix=("nd");
+      else if (date==3) suffix=("rd");
+      else if (date==21) suffix=("st");
+      else if (date==22) suffix=("nd");
+      else if (date==23) suffix=("rd");
+      else if (date==31) suffix=("st");
+      else suffix=("th");
+
+    if (month==1) monthName=("January");
+      else if (month==2) monthName=("February");
+      else if (month==3) monthName=("March");
+      else if (month==4) monthName=("April");
+      else if (month==5) monthName=("May");
+      else if (month==6) monthName=("June");
+      else if (month==7) monthName=("July");
+      else if (month==8) monthName=("August");
+      else if (month==9) monthName=("September");
+      else if (month==10) monthName=("October");
+      else if (month==11) monthName=("November");
+      else monthName=("December");  
+
+    document.write(dayName[day] + " " + date + suffix + " " + monthName + " " + year)
+    //-->
+    </script>
+  </div>
+
+
 </div>	
 
 <div id="navContainer">
