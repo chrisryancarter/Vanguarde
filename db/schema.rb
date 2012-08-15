@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120720165612) do
+ActiveRecord::Schema.define(:version => 20120815171411) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,6 +46,22 @@ ActiveRecord::Schema.define(:version => 20120720165612) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "carousels", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "image"
+  end
+
+  create_table "news", :force => true do |t|
+    t.string   "video"
+    t.string   "featured_image"
+    t.string   "title"
+    t.text     "subtext"
+    t.text     "fulltext"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
   create_table "news_images", :force => true do |t|
     t.string   "image"
     t.integer  "post_id"
@@ -62,6 +78,12 @@ ActiveRecord::Schema.define(:version => 20120720165612) do
     t.string   "image"
     t.string   "video"
     t.boolean  "published"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "static_carousels", :force => true do |t|
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
