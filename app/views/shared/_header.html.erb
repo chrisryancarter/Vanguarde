@@ -87,16 +87,20 @@
       
       <div id="slideDynamic">
         <div id="carousel">
-          <% Carousel.all.each do |carousel| %>
-            <%= image_tag carousel.image.url %>
-            <!-- <%= image_tag "temp/topslide_2.jpg" %> <%= image_tag "temp/topslide_1.jpg" %> <%= image_tag "temp/topslide_2.jpg" %> <%= image_tag "temp/topslide_1.jpg" %> -->
+          <% if Carousel.count > 0 %>
+            <% Carousel.all.each do |carousel| %>
+              <%= image_tag carousel.image.url %>
+              <!-- <%= image_tag "temp/topslide_2.jpg" %> <%= image_tag "temp/topslide_1.jpg" %> <%= image_tag "temp/topslide_2.jpg" %> <%= image_tag "temp/topslide_1.jpg" %> -->
+            <% end %>
           <% end %>
         </div>
       </div>	
 
       <div id="slideStatic">
-        <%= image_tag StaticCarousel.first.image.url %>
-        <!-- <%= image_tag "temp/topslide_1.jpg" %> -->
+        <% if StaticCarousel.count > 0 %>
+          <%= image_tag StaticCarousel.first.image.url %>
+          <!-- <%= image_tag "temp/topslide_1.jpg" %> -->
+        <% end %>
       </div>  
 
     </div>
