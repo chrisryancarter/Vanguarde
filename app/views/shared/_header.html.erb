@@ -57,7 +57,9 @@
       <li><a href="#">Categories</a>
         <ul>
           <% categories.each do |category| %>
-            <li><a href="javascript:void(0)"><%= category %> (<%= Post.count(:conditions => "category = '#{category}'") %>)</a></li>
+            <li>
+            <%= link_to "#{category} (#{Post.count(:conditions => "category = '#{category}'")})", "filter/#{category}.js", :remote => true %>
+            </li>
           <% end %>
         </ul>
       </li>

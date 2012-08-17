@@ -12,6 +12,7 @@ Vangaurde::Application.routes.draw do
   get "about" => 'pages#about'
   get "contact" => 'pages#contact'
   get "newsSingle" => 'pages#newsSingle'
+  get "filter/:category" => 'pages#filter'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

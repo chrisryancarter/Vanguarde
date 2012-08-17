@@ -1,0 +1,22 @@
+<% @posts.each do |post| %>
+
+  <%= link_to post do %>
+    <div id="newsItem">
+      <div class="title">
+        <p>
+          <%= post.title %>
+          <br />
+          <span class="date">
+            <%= post.created_at.getlocal.strftime("%b %e, %Y") %>
+          </span>
+        </p>  
+      </div>
+      <%= image_tag post.image %> 
+      <br />
+      <div class="caption">     
+        <%= post.snippet %>
+      </div>    
+    </div>
+  <% end %>
+
+<% end %>
