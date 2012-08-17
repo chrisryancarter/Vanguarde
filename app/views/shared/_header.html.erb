@@ -56,12 +56,10 @@
       <li><a href="/about">The VV &amp; C</a></li>
       <li><a href="#">Categories</a>
         <ul>
-          <li><a href="#">Sevice one</a></li>
-          <li><a href="#">Sevice one</a></li>
-          <li><a href="#">Sevice one</a></li>
-          <li><a href="#">Sevice one</a></li>
-          <li><a href="#">Sevice one</a></li>
-
+          <% categories.each do |category| %>
+            <li><a href="javascript:void(0)"><%= category %> (<%= Post.count(:conditions => "category = '#{category}'") %>)</a></li>
+          <% end %>
+        </ul>
       </li>
     </ul>	
   </div>	

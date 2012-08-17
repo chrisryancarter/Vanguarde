@@ -1,3 +1,3 @@
-ActiveAdmin.register Carousel do
+ActiveAdmin.register Carousel, :as => "Homepage Carousel" do
   
 end

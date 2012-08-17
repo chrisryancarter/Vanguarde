@@ -1,6 +1,7 @@
 <%= semantic_nested_form_for [:admin, @post], :html => {:multipart => true} do |f| %>
   <%= f.inputs do %>
     <%= f.input :title, :label => false, :input_html => {:placeholder => "Title"} %>
+    <%= f.input :category, :as => :select, :collection => ["Art", "Architecture", "Culture", "Design", "Fashion", "Film", "Motion", "Photography", "Print", "Typography", "Vanguarde Works"] %>
     <%= f.input :snippet, :label => false, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
     <%= f.input :body, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
     <%= f.input :video, :label => false %>
