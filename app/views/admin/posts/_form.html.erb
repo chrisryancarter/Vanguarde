@@ -1,14 +1,14 @@
 <%= semantic_nested_form_for [:admin, @post], :html => {:multipart => true} do |f| %>
   <%= f.inputs do %>
-    <%= f.input :title, :label => false, :input_html => {:placeholder => "Title"} %>
+    <%= f.input :title, :input_html => {:placeholder => "Title"} %>
     <%= f.input :category, :as => :select, :collection => ["Art", "Architecture", "Culture", "Design", "Fashion", "Film", "Motion", "Photography", "Print", "Typography", "Vanguarde Works"] %>
-    <%= f.input :snippet, :label => false, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
-    <%= f.input :body, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
-    <%= f.input :video, :label => false %>
+    <%= f.input :snippet, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
+    <%= f.input :body, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+    <%= f.input :video %>
     <%= f.input :published %>
   <% end %>
   <%= f.inputs "Featured Image" do %>
-    <%= f.input :image, :label => false, :as => :file %>
+    <%= f.input :image, :as => :file %>
     <% unless f.object.image.url.blank? %>
       <%= f.template.image_tag(f.object.image.thumb.url) %>
     <% end %>
@@ -16,7 +16,7 @@
   <% end %>
   <%= f.inputs "Image Gallery" do %>
     <%= f.fields_for :news_images do |b| %>
-      <%= b.input :image, :as => :file, :label => false %>
+      <%= b.input :image, :as => :file %>
       <% unless b.object.image.url.blank? %>
         <%= b.template.image_tag(b.object.image.thumb.url) %>
         <%= b.link_to_remove "Remove image" %>

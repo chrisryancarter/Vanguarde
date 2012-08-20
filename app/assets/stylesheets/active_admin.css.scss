@@ -1,4 +1,3 @@
-// Active Admin CSS Styles
 body.active_admin ul.wysihtml5-toolbar {
   @import "bootstrap";
 }
@@ -8,10 +7,21 @@ body.active_admin {
     color: #333;
     text-decoration: none;
   }
+  iframe.wysihtml5-sandbox[style] {
+    margin-left: 20% !important;
+  }
+  // For compatability with nested_form
+  form fieldset > ol > div.fields > li, form fieldset ol a{
+    padding: 10px;
+  }
+  form fieldset > ol > div.fields > li label {
+    display: block;
+    width: 20%;
+    float: left;
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #5E6469;
+  }
 }
 @import "active_admin/mixins";
 @import "active_admin/base";
-
-// To customize the Active Admin interfaces, add your
-// styles here:
-

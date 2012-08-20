@@ -1,34 +1,18 @@
 <%= semantic_nested_form_for [:admin, @work], :html => {:multipart => true} do |f| %>
-  <%= f.inputs "Title" do %>
-    <%= f.input :title, :label => false, :input_html => {:placeholder => "Title"} %>
-  <% end %>
-  <%= f.inputs "Subtitle" do %>
-    <%= f.input :subtext, :label => false, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
-  <% end %>
-  <%= f.inputs "Body" do %>
-    <%= f.input :fulltext, :label => false, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
-  <% end %>
-  <%= f.inputs "Project Scope" do %>
-    <%= f.input :project_scope, :label => false, :input_html => { :placeholder => "Project scope..", :rows => 2 } %>
-  <% end %>
-  <%= f.inputs "Credits" do %>
-    <%= f.input :credits, :label => false, :input_html => { :placeholder => "Body...", :rows => 2 } %>
-  <% end %>
-  <%= f.inputs "Season" do %>
-    <%= f.input :season, :label => false, :input_html => { :placeholder => "Season...", :rows => 2} %>
-  <% end %>
-  <%= f.inputs "Select for homepage" do %>
+  <%= f.inputs do %>
+    <%= f.input :title, :input_html => {:placeholder => "Title"} %>
+    <%= f.input :subtext, :input_html => { :placeholder => "Snippet", :rows => 2, :class => "wysiwyg" } %>
+    <%= f.input :fulltext, :input_html => { :placeholder => "Body...", :class => "wysiwyg" } %>
+    <%= f.input :project_scope, :input_html => { :placeholder => "Project scope..", :rows => 2 } %>
+    <%= f.input :credits, :input_html => { :placeholder => "Body...", :rows => 2 } %>
+    <%= f.input :season, :input_html => { :placeholder => "Season...", :rows => 2} %>
     <%= f.input :selected %>
-  <% end %>
-  <%= f.inputs "Featured Image" do %>
-    <%= f.input :featured_image, :label => false, :as => :file %>
+    <%= f.input :featured_image, :as => :file %>
     <% unless f.object.featured_image.url.blank? %>
       <%= f.template.image_tag(f.object.featured_image.thumb.url) %>
     <% end %>
     <%= f.hidden_field :featured_image_cache %>
-  <% end %>
-  <%= f.inputs "Logo" do %>
-    <%= f.input :logo, :label => false, :as => :file %>
+    <%= f.input :logo, :as => :file %>
     <% unless f.object.logo.url.blank? %>
       <%= f.template.image_tag(f.object.logo.thumb.url) %>
     <% end %>
@@ -36,7 +20,7 @@
   <% end %>
   <%= f.inputs "Image Gallery" do %>
     <%= f.fields_for :work_images do |b| %>
-      <%= b.input :image, :as => :file, :label => false %>
+      <%= b.input :image, :as => :file %>
       <% unless b.object.image.url.blank? %>
         <%= b.template.image_tag(b.object.image.thumb.url) %>
         <%= b.link_to_remove "Remove image" %>
