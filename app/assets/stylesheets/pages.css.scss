@@ -206,6 +206,7 @@ body{
 	list-style:none;
 	position:absolute;
 	left:-9999px; 
+	z-index: 99;
 }
 #nav ul li{
 	padding: 5px; 
@@ -227,14 +228,14 @@ body{
 	font-family: 'Georgia';
 	font-style: italic;
 	text-transform: none;
-
+	width: 250px;
 }
 
-#nav li:hover ul li:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+#nav li:hover ul li:hover{ 
 	background:#333;
 }
 
-#nav li:hover ul li{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+#nav li:hover ul li{ 
 	background: #000;
 }
 
@@ -262,7 +263,7 @@ body{
 	margin: 0;
 	overflow: auto;
 	padding: 0;
-	position: relative; /*for ie7 to work e.g in html carousels*/
+	position: relative; 
 	width: 300px
 }
 
@@ -346,11 +347,11 @@ body{
 }
 
 #mainSliderContainer .link{
-	width:1060px;
+	width:1088px;
 	height:10px;
 	border-top: solid 1px #000; 
 	padding-left: 10px;
-	margin-top:400px;
+	margin-top:-15px;
 	clear:both;
 
 }
@@ -494,6 +495,7 @@ body{
 	color: #fff;
 	text-transform: uppercase;
 	margin-top: 4px;
+	font-size:14px;	
 }
 
 #worksPhotoSubtitle{
