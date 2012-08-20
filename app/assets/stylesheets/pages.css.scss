@@ -228,14 +228,14 @@ body{
 	font-family: 'Georgia';
 	font-style: italic;
 	text-transform: none;
-
+	width: 250px;
 }
 
-#nav li:hover ul li:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+#nav li:hover ul li:hover{ 
 	background:#333;
 }
 
-#nav li:hover ul li{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+#nav li:hover ul li{ 
 	background: #000;
 }
 
