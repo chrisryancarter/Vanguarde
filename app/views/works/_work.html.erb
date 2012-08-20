@@ -36,11 +36,9 @@
 </div>
 
 <div id="slides2">
-      <%= image_tag "temp/largeProject.jpg", :class => "large" %>
-
-      <%= image_tag "temp/largeProject.jpg", :class => "large" %>
-
-      <%= image_tag "temp/largeProject.jpg", :class => "large" %>
+  <% work.work_images.each do |work_image| %>
+    <%= image_tag work_image.image.url, :class => "large" %>
+  <% end %>
 </div>  
  
 <div class="tagImage">
