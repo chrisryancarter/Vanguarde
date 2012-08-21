@@ -6,7 +6,6 @@
     <%= f.input :project_scope, :input_html => { :placeholder => "Project scope..", :rows => 2 } %>
     <%= f.input :credits, :input_html => { :placeholder => "Body...", :rows => 2 } %>
     <%= f.input :season, :input_html => { :placeholder => "Season...", :rows => 2} %>
-    <%= f.input :selected %>
     <%= f.input :featured_image, :as => :file %>
     <% unless f.object.featured_image.url.blank? %>
       <%= f.template.image_tag(f.object.featured_image.thumb.url) %>
@@ -17,6 +16,8 @@
       <%= f.template.image_tag(f.object.logo.thumb.url) %>
     <% end %>
     <%= f.hidden_field :logo_cache %>
+    <%= f.input :lookbook, :as => :file %>
+    <%= f.input :selected, :label => "Feature on homepage" %>
   <% end %>
   <%= f.inputs "Image Gallery" do %>
     <%= f.fields_for :work_images do |b| %>
