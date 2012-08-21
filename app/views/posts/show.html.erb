@@ -29,7 +29,7 @@
     </div>
     <div class="spacer"></div>
 
-    <% if @post.news_images %>
+    <% unless @post.news_images.blank? %>
       <div id="main">
         <% @post.news_images.each do |image| %>
           <%= image_tag image.image.url %>

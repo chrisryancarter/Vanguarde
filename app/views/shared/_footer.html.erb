@@ -1,3 +1,11 @@
+<div id="twitterContainer">
+  <% Twitter.user_timeline("thevanguarde", :count => 3).each do |tweet| %>
+    <div id="tweetContainer">
+      <%= tweet.text.gsub(/(http:\/\/\S*)/, '<a href="\1" target="_blank">\1</a>').html_safe %>
+    </div>
+  <% end %>
+</div>  
+
 <div id="footer">
 	<ul id="linksLeft">
 		<li>Contact</li>
