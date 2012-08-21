@@ -14,7 +14,7 @@
       <span class="date">&#8211; <%= @post.created_at.getlocal.strftime("%b %e, %Y") %></span>
     </div>
 
-    <% if @post.video %>
+    <% unless @post.video.blank? %>
       <div id="video">
         <iframe src="http://player.vimeo.com/video/<%= /vimeo\.com\/(........)/.match(@post.video)[1] %>?byline=0&amp;portrait=0&amp;color=ffffff" width="975" height="731" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
       </div>
