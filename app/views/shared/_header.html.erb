@@ -58,7 +58,8 @@
         <ul>
           <% categories.each do |category| %>
             <li>
-            <%= link_to "#{category} (#{Post.count(:conditions => "category = '#{category}'")})", "filter/#{category}.js", :remote => true %>
+            <%= link_to "#{category}", "filter/#{category}.js", :remote => true %>
+            <span class="gold"><%= "(#{Post.count(:conditions => "category = '#{category}'")})" %></span>
             </li>
           <% end %>
         </ul>
@@ -76,7 +77,7 @@
 <form id="cse-search-box" action="http://google.com/cse" target="_BLANK" >
   <input type="hidden" name="cx" value="009075367635003163300:qypfq6lx014" />
   <input type="hidden" name="ie" value="UTF-8" />
-  <input type="text" name="q" size="31" id="searchBox" placeholder="search"/>
+  <input type="text" name="q" size="31" id="searchBox" placeholder="SEARCH"/>
   <input type="submit" name="sa" value=""  class="submitButton"/>
 </form>
 

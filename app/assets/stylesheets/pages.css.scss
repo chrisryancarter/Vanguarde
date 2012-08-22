@@ -212,6 +212,8 @@ body{
 #nav ul li{
 	padding: 5px; 
 	float:none;
+	width: 140px;
+	border-bottom: #fff solid 1px;
 }
 #nav ul a{
 	white-space:nowrap; 
@@ -245,7 +247,12 @@ body{
 #searchBox{
 	background: transparent;
 	border: 1px solid #000;
-	width: 155px;
+	height:15px;
+  	width:170px;
+  	font-family: 'Mussica';
+  	padding: 1px;
+  	color:#000;
+  	margin-top:11px;
 }
 
 .submitButton {
@@ -254,6 +261,7 @@ body{
     width: 22px;
     height: 19px;
     border: none;
+	margin-left:-5px;    
 }
 
 #cse-search-box{
@@ -916,6 +924,7 @@ body{
 	margin:auto;
 	position: relative;
 	padding-bottom: 65px;
+	margin-top: 20px;
 }
 
 .aboutHeader{
@@ -1038,6 +1047,7 @@ body{
 	background-color: #000;
 	padding-left:42px;
   	padding-top:45px;
+  	position: relative;
 }
 
 
@@ -1056,7 +1066,20 @@ body{
 	color:#a6a28a;
 }
 
+#twitterLink{
+	position: absolute;
+	bottom: 20px;
+	left: 42px;
+}
 
+#twitterLink a{
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Futura-Con';
+	font-size: 14px;
+	text-transform: uppercase;
+
+}
 /* Footer */
 
 #footer{

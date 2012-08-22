@@ -47,9 +47,9 @@ ActiveRecord::Schema.define(:version => 20120821151805) do
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "carousels", :force => true do |t|
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "image"
   end
 
   create_table "news", :force => true do |t|
