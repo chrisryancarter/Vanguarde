@@ -16,8 +16,12 @@ jQuery(function( $ ) {
     auto: {
       enabled: true,
       interval: 3000,
-      direction: "next"
-    }
+      direction: "prev"
+    },
+      width: 1058,
+      height: 794,
+      visible: 1,
+      step: 1,
   });
   
   $( "#ui-carousel-next" )
