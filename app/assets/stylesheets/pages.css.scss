@@ -189,6 +189,24 @@ body{
 	position:relative;
 }
 
+#nav li .drop{
+	background: url('navDrop.png');
+	background-position:100% 50%;
+  	background-repeat:no-repeat no-repeat;
+  	color:#000000;
+  	float:left;
+  	font-family:Futura, Helvetica;
+  	font-size:14px;
+  	font-weight:100;
+ 	list-style-type:none;
+ 	margin-right:16px;
+ 	position:relative;
+ 	text-transform:uppercase;
+ 	width:93px;
+}
+
+
+
 #nav a{
 	font-size: 14px;
 	font-family: 'Futura', Helvetica;
@@ -234,6 +252,11 @@ body{
 	width: 250px;
 }
 
+#nav li:hover ul li:first-child{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	margin-top:20px;
+}
+
+
 #nav li:hover ul li:hover{ 
 	background:#333;
 }
@@ -242,6 +265,12 @@ body{
 	background: #000;
 }
 
+
+.gold{
+	color:#9f9465;
+	font-family: 'georgia';
+	font-style: italic;
+}
 /* Search */
 
 #searchBox{
@@ -925,11 +954,14 @@ body{
 	position: relative;
 	padding-bottom: 65px;
 	margin-top: 20px;
+	margin-bottom: 20px;
+
 }
 
 .aboutHeader{
 	margin-left:  33px;
 	margin-top:25px;
+	position: relative;	
 }
 
 .aboutText{
