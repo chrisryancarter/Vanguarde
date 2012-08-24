@@ -1,5 +1,5 @@
 jQuery(function( $ ) {
-  $( "#carousel" ).rcarousel({
+  $( "#carousel1" ).rcarousel({
     auto: {
       enabled: true,
       interval: 3000,
@@ -12,7 +12,7 @@ jQuery(function( $ ) {
     orientation: "vertical",
   });
 
-  $('#slides2').rcarousel({
+  $( "#carousel2" ).rcarousel({
     auto: {
       enabled: true,
       interval: 3000,
@@ -22,16 +22,8 @@ jQuery(function( $ ) {
       height: 794,
       visible: 1,
       step: 1,
+      orientation: "vertical",
+ 
   });
-  
-  $( "#ui-carousel-next" )
-    .add( "#ui-carousel-prev" )
-    .hover(
-      function() {
-        $( this ).css( "opacity", 0.7 );
-      },
-      function() {
-        $( this ).css( "opacity", 1.0 );
-      }
-    );				
+  		
 });
