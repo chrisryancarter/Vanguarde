@@ -1137,10 +1137,6 @@ body{
 }
 
 #linksLeft {
-	font-family: 'Georgia';
-	font-size: 13px;
-	text-transform: uppercase;
-	font-style: italic;
 	color: #fff;
 	float: left;
 	margin-left:122px;
@@ -1158,11 +1154,6 @@ body{
 
 
 #linksRight {
-	font-family: 'Georgia';
-	font-size: 13px;
-	text-transform: uppercase;
-	font-style: italic;
-	color: #fff;
 	float: right;
 	margin-right:122px;
   	margin-top:142px;
@@ -1180,6 +1171,15 @@ body{
 
 #linksRight li:first-child, #linksLeft li:first-child {
   	border-top: none;
+}
+
+#linksLeft a, #linksRight a{
+	font-family: 'Georgia';
+	font-size: 13px;
+	text-transform: uppercase;
+	font-style: italic;
+	color: #fff;
+	text-decoration: none;
 }
 
 #copyright{
