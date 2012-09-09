@@ -74,6 +74,13 @@ body{
  	src: url('Futura-Condensed.otf');
  }
 
+ @font-face {
+  	font-family: 'Snob';
+    src: url('snob.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
 .georgia{
 	font-family:'Georgia';
 	font-style: italic;
@@ -103,15 +110,16 @@ body{
 	margin-right: auto;	
 	background-image: url('headerBack.png');
 	background-repeat:no-repeat;	
+	position: relative;
 }
 
 
 #date{
 	float:right;
-  	font-family: 'Mussica' ;
-  	font-size:12px;
+  	font-family: 'Snob' ;
+  	font-size:16px;
   	margin-right:7px;
-  	margin-top:444px;
+  	margin-top:440px;
   	text-transform:uppercase;
 }
 
@@ -271,6 +279,45 @@ body{
 	font-family: 'georgia';
 	font-style: italic;
 }
+
+
+/* Subscribe */
+
+#subscribeHeader{
+	position: absolute;
+	right:0;
+	top:0;	
+
+}
+
+
+#subscribeBox{
+	background: transparent;
+	border: 1px solid #000;
+	height:15px;
+  	width:200px;
+  	font-family: 'Mussica';
+  	padding: 1px;
+  	color:#000;
+  	margin-top:-5px;
+}
+
+.subscribeSubmitButton{
+    background: #000;
+    cursor:pointer;
+    width: 100px;
+    height: 22px;
+    border: none;
+	margin-left:-5px;  
+	color:#fff;
+	font-family: 'Futura-Con';  
+	text-align: center;
+	padding:3px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+
 /* Search */
 
 #searchBox{
