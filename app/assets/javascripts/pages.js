@@ -35,19 +35,19 @@ function generatePages() {
           $( "a:eq(0)", "#pages" )
             .removeClass( "off" )
             .addClass( "on" )
-            .css( "background-image", "url(../images/work/page-on.png)" );
+            .css( "background-image", "url(http://gentle-plains-2470.herokuapp.com/assets/work/page-on.png)" );
 
         }
 
         function pageLoaded( event, data ) {
           $( "a.on", "#pages" )
             .removeClass( "on" )
-            .css( "background-image", "url(../images/work/page-off.png)" );
+            .css( "background-image", "url(http://gentle-plains-2470.herokuapp.com/assets/work/page-off.png)" );
 
           $( "a", "#pages" )
             .eq( data.page )
             .addClass( "on" )
-            .css( "background-image", "url(../images/work/page-on.png)" );
+            .css( "background-image", "url(http://gentle-plains-2470.herokuapp.com/assets/work/page-on.png)" );
         }       
 
         $( "#carousel" ).rcarousel({
