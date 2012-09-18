@@ -7,6 +7,44 @@
     <p>Your Browser Sucks. Upgrade it! </p>
   </object>
 
+<script type='text/javascript'>
+
+function setIframeHeight( iframeId ) /** IMPORTANT: All framed documents *must* have a DOCTYPE applied **/
+{
+ var ifDoc, ifRef = document.getElementById( iframeId );
+
+ try
+ {   
+  ifDoc = ifRef.contentWindow.document.documentElement;  
+ }
+ catch( e )
+ { 
+  try
+  { 
+   ifDoc = ifRef.contentDocument.documentElement;  
+  }
+  catch(ee)
+  {   
+  }  
+ }
+ 
+ if( ifDoc )
+ {
+  ifRef.height = 1;  
+  ifRef.height = ifDoc.scrollHeight;
+  
+  /* For width resize, enable below.  */
+  
+  // ifRef.width = 1;
+  // ifRef.width = ifDoc.scrollWidth; 
+ }
+}
+
+</script>
+
+<iframe id = "myIframe"  src="http://vanguardecraft.tumblr.com/"  onload = "setIframeHeight( this.id )">
+
+
   <div id="titleWork">
     VANGUARDE WORKS
   </div>
@@ -36,7 +74,7 @@
   <div id="worksExpand">
   </div><!-- worksExpanded -->
 
-  <div id="titleNews">
+<!--  <div id="titleNews">
     In The News
     <div id="rightsubTitle">
       Archives
@@ -45,7 +83,7 @@
     <div id="subTitle" class="news">
     Current
   </div>
-
+-->
   <div class="spacer"></div>
 
 
