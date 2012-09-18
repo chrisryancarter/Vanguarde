@@ -1,3 +1,26 @@
+ <style type="text/css">
+      #container {
+        width: 300px;
+      }
+      
+      #pages {
+        width: 92px;
+        height: 18px;
+        margin: 5px auto 0 auto;
+      }
+      
+      .bullet {
+        background: url(images/page-off.png) center center no-repeat;
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin: 0;
+        margin-right: 5px;
+        float: left;        
+      }     
+    </style>
+
+
   <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
 <script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
 <script src="/assets/jquery-ui.js?body=1" type="text/javascript"></script>
@@ -46,12 +69,17 @@
   <div class="spacer"></div>
 </div>
 
-<div id="carousel2">
+<div id="carousel">
   <% work.work_images.each do |work_image| %>
     <%= image_tag work_image.image.url %>
   <% end %>
 </div>  
- 
+<div id="worksNav">
+  <a href="#" id="ui-carousel-next">next</a>
+  <div id="pages"></div>
+  <a href="#" id="ui-carousel-prev">prev</a>
+</div>
+
 <div class="tagImage">
   <%= image_tag work.logo.url %>
 </div>  
