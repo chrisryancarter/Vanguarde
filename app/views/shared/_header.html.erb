@@ -1,8 +1,8 @@
 <div id="header">
 
   <div id="subscribeHeader">
-    <form action="http://google.com/cse" target="_BLANK" >
-      <input type="text" name="q" size="31" id="subscribeBox" placeholder="EMAIL"/>
+    <form action="http://thevanguarde.us5.list-manage.com/subscribe/post?u=83c04706cb8d7475f5a0236e3&amp;id=9acd1a5b0f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <input type="text" id="subscribeBox" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required/>
       <input type="submit" value="SUBSCRIBE" class="subscribeSubmitButton"/>
     </form>
   </div>
@@ -63,12 +63,39 @@
       <li><a href="/about">The VV &amp; C</a></li>
       <li><a href="#" class="drop">Categories</a>
         <ul>
-          <% categories.each do |category| %>
             <li>
-            <%= link_to "#{category}", "filter/#{category}.js", :remote => true %>
-            <span class="gold"><%= "(#{Post.count(:conditions => "category = '#{category}'")})" %></span>
+            <a href="http://vanguardecraft.tumblr.com/tagged/art" target="tumblr">Art</a>
             </li>
-          <% end %>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/architecture" target="tumblr">Architecture</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/culture" target="tumblr">Culture</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/design" target="tumblr">Design</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/fashion" target="tumblr">Fashion</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/film" target="tumblr">Film</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/motion" target="tumblr">Motion</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/photography" target="tumblr">Photography</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/print" target="tumblr">Print</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/typography" target="tumblr">Typography</a>
+            </li>
+            <li>
+            <a href="http://vanguardecraft.tumblr.com/tagged/works" target="tumblr">Vanguarde Works</a>
+            </li>
         </ul>
       </li>
     </ul>	
