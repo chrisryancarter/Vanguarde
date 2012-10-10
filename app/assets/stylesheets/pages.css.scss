@@ -308,6 +308,18 @@ body{
   	margin-top:-5px;
 }
 
+
+#subscribeBoxFooter{
+	background: transparent;
+	border: 1px solid #fff;
+	height:18px;
+  	width:150px;
+  	font-family: 'Mussica';
+  	padding: 1px;
+  	color:#fff;
+  	margin-top:-5px;
+}
+
 .subscribeSubmitButton{
     background: #000;
     cursor:pointer;
@@ -323,6 +335,21 @@ body{
 	letter-spacing: 5px;
 }
 
+
+.subscribeSubmitButtonFooter{
+    background: #fff;
+    cursor:pointer;
+    width: 85px;
+    height: 22px;
+    border: none;
+	margin-left:-5px;  
+	color:black;
+	font-family: 'Futura-Con';  
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding:2px;
+}
 
 /* Search */
 
